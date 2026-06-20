@@ -1,7 +1,8 @@
 (function () {
-  const repoNewIssueUrl = "https://github.com/go-manga/GoMangaApp/issues/new";
+  const repoIssuesUrl = "https://github.com/go-manga/GoMangaApp/issues";
   const form = document.querySelector("[data-issue-form]");
   const preview = document.querySelector("[data-preview]");
+  const copyButton = document.querySelector("[data-copy-template]");
 
   if (!form || !preview) {
     return;
@@ -46,26 +47,38 @@
     ].join("\n");
   }
 
-  function issueTitle() {
-    const title = field("title") || "GoManga issue";
-    const area = field("area") || "App";
-    return `[${area}] ${title}`;
-  }
-
   function updatePreview() {
     preview.textContent = buildBody();
   }
 
+  async function copyTemplate() {
+    updatePreview();
+    if (!navigator.clipboard) {
+      return;
+    }
+    await navigator.clipboard.writeText(buildBody());
+    if (copyButton) {
+      const originalText = copyButton.textContent;
+      copyButton.textContent = "已複製";
+      window.setTimeout(function () {
+        copyButton.textContent = originalText;
+      }, 1800);
+    }
+  }
+
   form.addEventListener("input", updatePreview);
   form.addEventListener("change", updatePreview);
+  if (copyButton) {
+    copyButton.addEventListener("click", function () {
+      copyTemplate().catch(function () {
+        updatePreview();
+      });
+    });
+  }
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    const params = new URLSearchParams({
-      title: issueTitle(),
-      body: buildBody(),
-      labels: "bug,needs-triage"
-    });
-    window.location.href = `${repoNewIssueUrl}?${params.toString()}`;
+    updatePreview();
+    window.location.href = repoIssuesUrl;
   });
 
   updatePreview();

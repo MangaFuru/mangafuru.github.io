@@ -32,7 +32,7 @@
         <div>
           <p class="section-kicker">Report issue</p>
           <h1 id="support-title">回報 GoManga 問題</h1>
-          <p>把版本、裝置、發生頁面與重現步驟整理成可追蹤的 issue。請移除私密資料後再送出。</p>
+          <p>把版本、裝置、發生頁面與重現步驟整理好，再前往 GitHub Issues 開新回報。請移除私密資料後再送出。</p>
         </div>
         <img src="assets/launch-logo.png" alt="GoManga" width="300" height="213">
       </div>
@@ -43,7 +43,7 @@
         <form class="issue-form" data-issue-form>
           <div class="form-heading">
             <p class="section-kicker">Issue details</p>
-            <h2>問題內容</h2>
+            <h2>問題草稿</h2>
           </div>
 
           <label>
@@ -130,7 +130,8 @@
           </label>
 
           <div class="actions">
-            <button class="button primary" type="submit">在 GitHub 建立 issue</button>
+            <button class="button primary" type="submit">前往 GitHub Issues</button>
+            <button class="button neutral" type="button" data-copy-template>複製草稿</button>
             <a class="button neutral" href="https://github.com/go-manga/GoMangaApp/issues">查看既有 issues</a>
           </div>
         </form>
@@ -139,8 +140,10 @@
           <img src="assets/launch-bg-2.png" alt="GoManga launch artwork">
           <div>
             <p class="section-kicker">Before sending</p>
-            <h2 id="support-notes-title">只提交定位問題需要的資訊。</h2>
+            <h2 id="support-notes-title">到 Issues 頁面後請選擇模板。</h2>
             <ul>
+              <li>請先搜尋既有 issue，避免重複回報。</li>
+              <li>按 New issue 後，選擇 GoManga bug report 並照欄位填寫。</li>
               <li>閱讀器問題：請填章節切換、閱讀方向與是否可穩定重現。</li>
               <li>來源問題：只填公開 host 或來源名稱，不要貼 cookie、token 或帳密。</li>
               <li>診斷日誌：先確認內容不含私密資料再附上。</li>
@@ -155,7 +158,7 @@
         <div>
           <p class="section-kicker">Generated issue</p>
           <h2 id="preview-title">送出前的 issue 內容</h2>
-          <p>填寫欄位後，這裡會即時顯示送到 GitHub 的 Markdown 內容。</p>
+          <p>填寫欄位後，這裡會即時顯示可貼到 GitHub issue 的 Markdown 草稿。GitHub Issues 內也有正式模板可照著填寫。</p>
         </div>
         <pre class="issue-preview" data-preview>等待填寫問題內容...</pre>
       </div>
