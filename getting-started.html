@@ -1,65 +1,123 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="上手指南 | GoManga"
+  data-title-en="Get started | GoManga"
+  data-desc-zh="GoManga 上手指南：Repositories、Sources、書庫、清單與閱讀器的基本使用路徑。"
+  data-desc-en="GoManga getting-started guide: repositories, sources, library, lists, and the reader.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>上手指南 | GoManga</title>
   <meta name="description" content="GoManga 上手指南：Repositories、Sources、書庫、清單與閱讀器的基本使用路徑。">
+  <meta property="og:title" content="GoManga 上手指南">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="document-page">
+<body class="doc-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a aria-current="page" href="getting-started.html">上手</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">回報問題</a>
-      <a href="privacy.html">隱私</a>
-      <a href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a aria-current="page" href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
-  <main class="document-shell">
-    <p class="section-kicker">Getting Started</p>
-    <h1>GoManga 上手指南</h1>
-    <p class="updated">這份指南只涵蓋 GoManga app 自己負責的流程；來源內容、帳號、授權與可用性由你設定的來源或服務決定。</p>
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">上手指南</span><span data-t="en">Getting started</span></p>
+      <h1 class="doc-title"><span data-t="zh">五步走進 GoManga</span><span data-t="en">GoManga in five steps</span></h1>
+      <p class="updated">
+        <span data-t="zh">這份指南只涵蓋 GoManga App 自己負責的流程；來源內容、帳號、授權與可用性，由你設定的來源或服務決定。</span>
+        <span data-t="en">This guide covers only what the GoManga app itself handles. Source content, accounts, authorization, and availability are determined by the sources or services you configure.</span>
+      </p>
+    </div>
+  </section>
 
-    <section>
-      <h2>1. 先加入 Repositories</h2>
-      <p>GoManga 的來源流程從 Repositories 開始。加入 repository 後，app 才能顯示可安裝或可使用的 Sources。</p>
-      <p>GoManga 不提供官方內容目錄，也不推薦特定第三方來源。請只加入你信任且有權使用的 repository 或本機服務。</p>
-    </section>
+  <main class="doc-shell doc-body">
+    <div class="summary-card" style="margin-top:0;margin-bottom:26px">
+      <p>
+        <span data-t="zh"><strong>最快的兩條上手路徑，都是你已經擁有的內容：</strong>① 匯入本機的 EPUB、PDF、CBZ，原地就能讀；② 連上你自架的 Komga 伺服器，讀你整理好的書庫。想要更多時，再依下面的步驟自行設定其他來源。</span>
+        <span data-t="en"><strong>The two fastest on-ramps are content you already own:</strong> ① import local EPUB, PDF, and CBZ files and read them in place; ② connect to your own self-hosted Komga server and read the library you organized. When you want more, configure other sources yourself using the steps below.</span>
+      </p>
+    </div>
+    <div class="steps">
+      <section class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3><span data-t="zh">先加入 Repositories</span><span data-t="en">Add a repository first</span></h3>
+          <p><span data-t="zh">GoManga 的來源流程從 Repositories 開始。加入 repository 後，App 才能顯示可安裝或可使用的 Sources。</span><span data-t="en">GoManga's source flow starts with repositories. Once you add one, the app can show the sources available to install or use.</span></p>
+          <p><span data-t="zh">GoManga 不提供官方內容目錄，也不推薦特定第三方來源。請只加入你信任且有權使用的 repository 或本機服務。</span><span data-t="en">GoManga ships no official catalog and recommends no particular third-party source. Add only repositories or local services you trust and have the right to use.</span></p>
+        </div>
+      </section>
 
-    <section>
-      <h2>2. 安裝或啟用 Sources</h2>
-      <p>Sources 是你用來瀏覽目錄、搜尋、開啟詳情與載入章節的來源入口。若來源需要登入、mirror、token 或驗證，請在 app 內的 Source Settings 依來源要求設定。</p>
-    </section>
+      <section class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3><span data-t="zh">安裝或啟用 Sources</span><span data-t="en">Install or enable sources</span></h3>
+          <p><span data-t="zh">Sources 是你用來瀏覽目錄、搜尋、開啟詳情與載入章節的來源入口。若來源需要登入、mirror、token 或驗證，請在 App 內的 Source Settings 依來源要求設定。</span><span data-t="en">Sources are how you browse catalogs, search, open details, and load chapters. If a source needs login, a mirror, a token, or verification, configure it in the in-app Source Settings as that source requires.</span></p>
+        </div>
+      </section>
 
-    <section>
-      <h2>3. 瀏覽、加入書庫或稍後閱讀</h2>
-      <p>從 Browse 或來源 catalog 開啟作品詳情後，你可以加入書庫或稍後閱讀。書庫適合長期追蹤；稍後閱讀適合先保存但還不想放進正式書庫的作品。</p>
-    </section>
+      <section class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3><span data-t="zh">瀏覽、加入書庫或稍後閱讀</span><span data-t="en">Browse, then add to library or read-later</span></h3>
+          <p><span data-t="zh">從 Browse 或來源 catalog 開啟作品詳情後，你可以加入書庫或稍後閱讀。書庫適合長期追蹤；稍後閱讀適合先保存但還不想放進正式書庫的作品。</span><span data-t="en">Open a title from Browse or a source catalog, then add it to your library or read-later. The library suits titles you follow long-term; read-later is for things you want to keep without committing to the main library yet.</span></p>
+        </div>
+      </section>
 
-    <section>
-      <h2>4. 開始閱讀與續讀</h2>
-      <p>從作品詳情、書庫、稍後閱讀或閱讀歷史都可以回到閱讀流程。GoManga 會保存閱讀進度，讓你下次從合適的位置繼續。</p>
-    </section>
+      <section class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3><span data-t="zh">開始閱讀與續讀</span><span data-t="en">Read and resume</span></h3>
+          <p><span data-t="zh">從作品詳情、書庫、稍後閱讀或閱讀歷史都可以回到閱讀流程。GoManga 會保存閱讀進度，讓你下次從合適的位置繼續。</span><span data-t="en">Jump back into reading from a title's detail, your library, read-later, or history. GoManga saves your progress so you can pick up from the right place next time.</span></p>
+        </div>
+      </section>
 
-    <section>
-      <h2>5. 遇到問題時</h2>
-      <p>若來源需要驗證、章節空白、圖片載入失敗、進度沒有保存或 app 行為異常，請先記下發生位置、app 版本、iOS 版本、來源 host 與重現步驟，再到 <a href="support.html">回報問題</a> 建立 issue。</p>
-    </section>
+      <section class="step">
+        <div class="step-num">5</div>
+        <div>
+          <h3><span data-t="zh">遇到問題時</span><span data-t="en">When something breaks</span></h3>
+          <p><span data-t="zh">若來源需要驗證、章節空白、圖片載入失敗、進度沒有保存或 App 行為異常，請先記下發生位置、App 版本、iOS 版本、來源 host 與重現步驟，再到 <a href="support.html">回報問題</a> 建立 issue。</span><span data-t="en">If a source needs verification, a chapter comes up blank, images fail to load, progress isn't saved, or the app behaves oddly, note the area, app version, iOS version, source host, and steps to reproduce, then open an issue from <a href="support.html">Report an issue</a>.</span></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="doc-note" style="margin-top:30px">
+      <span data-t="zh"><strong>提醒：</strong>請不要在公開回報中貼出密碼、私密 token、完整 cookie、付費內容或他人個資。來源相關欄位只填可公開資訊。</span>
+      <span data-t="en"><strong>Reminder:</strong> never paste passwords, private tokens, full cookies, paid content, or other people's personal data into public reports. For source fields, share public information only.</span>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <a href="faq.html">FAQ</a>
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 GoManga Team</span>
+        <span>
+          <a href="faq.html">FAQ</a> ·
+          <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a> ·
+          <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a> ·
+          <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        </span>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

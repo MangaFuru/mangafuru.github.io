@@ -1,90 +1,401 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="隱私權政策 | GoManga"
+  data-title-en="Privacy Policy | GoManga"
+  data-desc-zh="GoManga 隱私權政策：本機優先、無帳號、無追蹤。說明裝置端資料、來源連線、GitHub Pages 與問題回報的資料處理方式。"
+  data-desc-en="GoManga Privacy Policy: local-first, no account, no tracking. How device data, source connections, GitHub Pages, and issue reports are handled.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>隱私政策 | GoManga</title>
-  <meta name="description" content="GoManga 隱私政策：說明裝置端資料、來源連線、GitHub Pages、診斷與問題回報資料的處理方式。">
+  <title>隱私權政策 | GoManga</title>
+  <meta name="description" content="GoManga 隱私權政策：本機優先、無帳號、無追蹤。說明裝置端資料、來源連線、GitHub Pages 與問題回報的資料處理方式。">
+  <meta property="og:title" content="GoManga 隱私權政策">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="document-page">
+<body class="doc-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a href="getting-started.html">上手</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">回報問題</a>
-      <a aria-current="page" href="privacy.html">隱私</a>
-      <a href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a aria-current="page" href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
-  <main class="document-shell">
-    <p class="section-kicker">Privacy Policy</p>
-    <h1>GoManga 隱私政策</h1>
-    <p class="updated">最後更新：2026 年 6 月 20 日</p>
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="hero-halftone" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">隱私權政策</span><span data-t="en">Privacy Policy</span></p>
+      <h1 class="doc-title"><span data-t="zh">GoManga 隱私權政策</span><span data-t="en">GoManga Privacy Policy</span></h1>
+      <p class="updated"><span data-t="zh">最後更新：2026 年 6 月 20 日</span><span data-t="en">Last updated: June 20, 2026</span></p>
+    </div>
+  </section>
 
-    <section>
-      <h2>摘要</h2>
-      <p>GoManga 是本機優先的 iOS 漫畫閱讀器。GoManga Team 不經營 GoManga 帳號系統、不代管漫畫內容，也不會在本網站加入第三方 analytics 或自動翻譯腳本。</p>
-      <p>你設定的來源、書庫、閱讀進度、清單、偏好與診斷資料主要保存在你的裝置上。只有當你主動提交 issue、截圖、診斷片段或其他支援資訊時，這些內容才會離開你的裝置。</p>
-    </section>
+  <main class="doc-shell doc-body">
+    <div class="summary-card">
+      <p data-t="zh">GoManga 是一款以「本機優先」設計的 iOS 漫畫閱讀器，並非內容平台。我們不提供帳號系統、不託管或散布任何漫畫內容、不進行行為追蹤、不嵌入廣告或分析工具。您的書庫、閱讀進度、稍後再看／歷史紀錄、已安裝來源與來源設定、應用程式偏好設定，以及封面、頁面與中繼資料快取，皆儲存於您自己的裝置。應用程式僅會依照您自行設定的「儲存庫（Repositories）」與「來源（Sources）」、並依您的指示連線；這些第三方或自架服務不在我們控制範圍內，並依其自身政策運作。本政策亦涵蓋網站（GitHub Pages 託管）與透過 GitHub Issues 進行的問題回報，並提醒您切勿在公開回報中提交密碼、權杖、完整 Cookie 或其他機密。本繁體中文版為準據且具拘束力之權威版本，英文版僅供參考之翻譯。</p>
+      <p data-t="en">GoManga is a local-first iOS manga reader, not a content platform. We provide no account system, host or distribute no manga content, perform no behavioral tracking, and embed no ads or analytics. Your library, reading progress, read-later/history lists, installed-source records and source settings, app preferences, and cover/page/metadata caches all stay on your own device. Acting solely on your instruction and configuration, the app connects only to the "Repositories" and "Sources" you set up yourself; those third-party or self-hosted services are outside our control and follow their own policies. This policy also covers the website (hosted on GitHub Pages) and issue reporting through GitHub Issues, and warns you never to submit passwords, tokens, full cookies, or other secrets in public reports. The Traditional Chinese version is the controlling, authoritative text; the English version is a convenience translation.</p>
+    </div>
 
-    <section>
-      <h2>保存在裝置上的資料</h2>
-      <p>GoManga 可能在裝置上保存以下資料，用於提供閱讀與續讀體驗：</p>
+    <div class="doc-note">
+      <span data-t="zh"><strong>說明：</strong>本文件同時涵蓋 GoManga App、官方網站與透過 GitHub Issues 進行的問題回報。繁體中文版為準據且具拘束力之版本，英文版僅供參考翻譯。</span>
+      <span data-t="en"><strong>Note:</strong> this document covers the GoManga app, the official website, and issue reporting via GitHub Issues. The Traditional Chinese version is the controlling, binding text; the English version is a convenience translation.</span>
+    </div>
+
+    <nav class="toc" aria-label="Privacy contents">
+      <h2><span data-t="zh">目錄</span><span data-t="en">Contents</span></h2>
+      <ol>
+          <li><a href="#sec-1"><span data-t="zh">1. 我們是誰與適用範圍</span><span data-t="en">1. Who We Are and Scope</span></a></li>
+          <li><a href="#sec-2"><span data-t="zh">2. 我們的核心原則：本機優先、無帳號、無追蹤</span><span data-t="en">2. Our Core Principle: Local-First, No Account, No Tracking</span></a></li>
+          <li><a href="#sec-3"><span data-t="zh">3. 儲存在您裝置上的資料</span><span data-t="en">3. Data Stored on Your Device</span></a></li>
+          <li><a href="#sec-4"><span data-t="zh">4. 我們收集與不收集的資訊</span><span data-t="en">4. Information We Do and Do Not Collect</span></a></li>
+          <li><a href="#sec-5"><span data-t="zh">5. 來源與網路連線</span><span data-t="en">5. Sources and Network Connections</span></a></li>
+          <li><a href="#sec-6"><span data-t="zh">6. 網站與 GitHub</span><span data-t="en">6. Website and GitHub</span></a></li>
+          <li><a href="#sec-7"><span data-t="zh">7. 您選擇提交的診斷與問題回報</span><span data-t="en">7. Diagnostics and Issue Reports You Choose to Submit</span></a></li>
+          <li><a href="#sec-8"><span data-t="zh">8. 法律依據與您的隱私權利</span><span data-t="en">8. Legal Bases and Your Privacy Rights</span></a></li>
+          <li><a href="#sec-9"><span data-t="zh">9. 國際使用者與資料傳輸</span><span data-t="en">9. International Users and Data Transfers</span></a></li>
+          <li><a href="#sec-10"><span data-t="zh">10. 兒童隱私</span><span data-t="en">10. Children's Privacy</span></a></li>
+          <li><a href="#sec-11"><span data-t="zh">11. 安全</span><span data-t="en">11. Security</span></a></li>
+          <li><a href="#sec-12"><span data-t="zh">12. 第三方服務與連結免責聲明</span><span data-t="en">12. Third-Party Services and Links Disclaimer</span></a></li>
+          <li><a href="#sec-13"><span data-t="zh">13. 本政策之變更</span><span data-t="en">13. Changes to This Policy</span></a></li>
+          <li><a href="#sec-14"><span data-t="zh">14. 聯絡我們</span><span data-t="en">14. Contact Us</span></a></li>
+          <li><a href="#sec-15"><span data-t="zh">15. 準據語言條款</span><span data-t="en">15. Controlling Language</span></a></li>
+      </ol>
+    </nav>
+
+      <section id="sec-1">
+        <h2><span data-t="zh">1. 我們是誰與適用範圍</span><span data-t="en">1. Who We Are and Scope</span></h2>
+        <div data-t="zh">
+      <p>本隱私權政策由 GoManga 團隊（以下稱「GoManga 團隊」、「我們」）發布。GoManga 團隊為一個獨立的小型團隊／個人開發者，並非註冊公司。就本政策所述及之有限個人資料，其控制者為 GoManga 團隊，聯絡方式為 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>。</p>
+      <p>本政策說明在您使用 GoManga（一款適用於 iOS 18 以上版本、以本機優先設計的 iOS 漫畫閱讀器）、瀏覽我們的網站，或透過 GitHub Issues 向我們回報問題時，相關資料如何被處理。</p>
+      <p>本政策適用於下列各項：</p>
       <ul>
-        <li>書庫、稍後閱讀、閱讀歷史與閱讀進度。</li>
-        <li>你加入或安裝的來源紀錄，以及來源相關設定。</li>
-        <li>app 偏好設定，例如語言、外觀、閱讀方向與快取設定。</li>
-        <li>封面、章節頁面與 metadata 快取，用於提升載入速度與重讀體驗。</li>
-        <li>本機診斷記錄，用於追查 app 行為、錯誤與效能問題。</li>
+        <li>GoManga iOS 應用程式本身；</li>
+        <li>託管於 <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a> 的官方網站；</li>
+        <li>託管於 <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a> 的問題與錯誤回報管道。</li>
       </ul>
-    </section>
+      <p>由於 GoManga 採用本機優先設計，我們對於個人資料所扮演的「控制者」角色極為有限。我們不營運中央伺服器來收集您的閱讀活動，也沒有帳號系統。對於您自行設定的第三方或自架來源、以及 GitHub 等基礎設施供應商所進行的處理，則由各該方依其自身政策擔任控制者或處理者，不在我們的控制範圍之內。</p>
+        </div>
+        <div data-t="en">
+      <p>This Privacy Policy is published by the GoManga Team ("GoManga Team", "we", "us", or "our"). The GoManga Team is a small independent team / individual developer and is not a registered company. For the limited personal data described in this policy, the controller is the GoManga Team, contactable at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>.</p>
+      <p>This policy explains how data is handled when you use GoManga, a local-first iOS manga reader for iOS 18 and later, when you visit our website, and when you report issues to us through GitHub Issues.</p>
+      <p>This policy applies to the following:</p>
+      <ul>
+        <li>the GoManga iOS application itself;</li>
+        <li>the official website hosted at <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a>;</li>
+        <li>the issue and bug-reporting channel hosted at <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a>.</li>
+      </ul>
+      <p>Because GoManga is local-first, our role as a "controller" of personal data is very limited. We do not operate a central server to collect your reading activity, and there is no account system. Processing performed by the third-party or self-hosted sources you configure, and by infrastructure providers such as GitHub, is carried out by those parties as controller or processor under their own policies and is outside our control.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>來源與網路連線</h2>
-      <p>GoManga 會依照你自己的設定連線到來源、來源服務或本機服務，以取得清單、詳情、章節與圖片頁。這些第三方網站、服務或你自己的本機服務不由 GoManga Team 控制，並可能依其自身政策處理你的連線資訊。</p>
-      <p>iOS 可能會詢問本機網路權限，原因是 GoManga 需要連線到你設定的本機來源服務。你可以在 iOS 系統設定中管理這項權限。</p>
-    </section>
+      <section id="sec-2">
+        <h2><span data-t="zh">2. 我們的核心原則：本機優先、無帳號、無追蹤</span><span data-t="en">2. Our Core Principle: Local-First, No Account, No Tracking</span></h2>
+        <div data-t="zh">
+      <p>GoManga 的根本設計原則是本機優先。實務上，這代表：</p>
+      <ul>
+        <li>沒有 GoManga 帳號系統。您無需註冊、登入或建立任何帳號即可使用本應用程式。</li>
+        <li>您的資料預設留在您的裝置上。除非您主動提交某些內容（例如問題回報、螢幕截圖或診斷片段），否則不會有任何資料離開您的裝置傳送給我們。</li>
+        <li>我們不進行行為追蹤。應用程式內不含廣告 SDK、分析 SDK，亦無行為剖析或跨應用程式追蹤。</li>
+        <li>我們不託管、不上傳、不儲存、不銷售、不散布、也不編列漫畫內容索引。GoManga 並未隨附任何官方內容目錄或推薦來源清單。</li>
+      </ul>
+      <p>GoManga 是一款漫畫閱讀器，外加一個來源設定框架。應用程式僅在您的指示與設定下運作，向您所選擇的來源請求並顯示內容；所有的來源、檔案、帳戶、憑證與存取權限，都是由您自行設定與控制。</p>
+        </div>
+        <div data-t="en">
+      <p>The fundamental design principle of GoManga is local-first. In practice, this means:</p>
+      <ul>
+        <li>There is no GoManga account system. You do not need to register, sign in, or create any account to use the app.</li>
+        <li>Your data stays on your device by default. Nothing leaves your device and is sent to us unless you actively submit something (for example, an issue report, a screenshot, or a diagnostic snippet).</li>
+        <li>We perform no behavioral tracking. The app contains no advertising SDKs, no analytics SDKs, and no behavioral profiling or cross-app tracking.</li>
+        <li>We do not host, upload, store, sell, distribute, or index manga content. GoManga ships no official content catalog and no recommended-source list.</li>
+      </ul>
+      <p>GoManga is a manga reader plus a source-configuration framework. Acting solely on your instruction and configuration, the app requests and displays content from the sources you choose; all sources, files, accounts, credentials, and access rights are configured and controlled by you.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>網站與 GitHub</h2>
-      <p>本網站以 GitHub Pages 提供，問題回報使用 GitHub Issues。GoManga Team 不在本網站加入 Google Analytics、廣告 SDK 或第三方行為追蹤。GitHub 仍可能依 GitHub 自身政策處理標準伺服器記錄、登入狀態與 issue 內容。</p>
-      <p>如果你使用 GitHub issue 或其他第三方平台提交回饋，該平台可能會記錄帳號、IP、瀏覽器資訊與提交內容。公開 issue 會被其他人看見。</p>
-    </section>
+      <section id="sec-3">
+        <h2><span data-t="zh">3. 儲存在您裝置上的資料</span><span data-t="en">3. Data Stored on Your Device</span></h2>
+        <div data-t="zh">
+      <p>下列資料是在您裝置本機上建立並儲存。在正常使用情況下，這些資料不會傳送給 GoManga 團隊：</p>
+      <ul>
+        <li>您的書庫，以及匯入的內容項目；</li>
+        <li>稍後再看／歷史清單與閱讀紀錄；</li>
+        <li>閱讀進度（包含章節與頁面位置）；</li>
+        <li>已安裝的來源紀錄、儲存庫設定與個別來源設定；</li>
+        <li>應用程式偏好設定（例如語言、外觀、閱讀方向、快取設定）；</li>
+        <li>封面、頁面影像與中繼資料的快取；</li>
+        <li>本機診斷紀錄（log）。</li>
+      </ul>
+      <p>這些資料由 iOS 在您裝置上管理。您可以透過刪除個別項目、清除快取，或自您的裝置移除應用程式來刪除這些資料。</p>
+      <p>本應用程式內建一個 Local（本機）來源，作為一個內容中立的機制，供您匯入或閱讀您在自己裝置或網路上已經擁有並控制的檔案。它本身不隨附任何內容、不編列任何索引，亦非由我們提供或推薦的內容來源。移除這個 Local 來源只會移除其進入點紀錄，而不會刪除您先前匯入的內容。</p>
+        </div>
+        <div data-t="en">
+      <p>The following data is created and stored locally on your device. Under normal use, it is not transmitted to the GoManga Team:</p>
+      <ul>
+        <li>your library and imported content items;</li>
+        <li>read-later / history lists and reading history;</li>
+        <li>reading progress (including chapter and page position);</li>
+        <li>installed-source records, repository configuration, and individual source settings;</li>
+        <li>app preferences (such as language, appearance, reading direction, and cache settings);</li>
+        <li>caches of cover images, page images, and metadata;</li>
+        <li>local diagnostic logs.</li>
+      </ul>
+      <p>This data is managed by iOS on your device. You can delete it by removing individual items, clearing caches, or uninstalling the app from your device.</p>
+      <p>The app includes a built-in Local source, which is a content-agnostic mechanism that lets you import or read files you already own and control on your own device or network. It ships with no content of its own, indexes nothing, and is not a content source provided or recommended by us. Removing the Local source only removes its entry-point record and does not delete content you previously imported.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>診斷與問題回報</h2>
-      <p>當你透過 <a href="support.html">GoManga 問題回報</a>、GitHub issue、電子郵件或其他方式主動提交問題時，你提供的內容可能包含 app 版本、iOS 版本、裝置型號、重現步驟、來源 host、錯誤訊息、截圖或診斷片段。</p>
-      <p>請不要提交帳號密碼、私密 token、完整 cookie、付費內容、個人通訊資料或其他敏感資訊。若需要分享診斷資料，請先檢查並移除不該公開的內容。</p>
-    </section>
+      <section id="sec-4">
+        <h2><span data-t="zh">4. 我們收集與不收集的資訊</span><span data-t="en">4. Information We Do and Do Not Collect</span></h2>
+        <div data-t="zh">
+      <p>我們（GoManga 團隊）不收集以下資訊：</p>
+      <ul>
+        <li>我們不收集 GoManga 帳號或登入憑證（因為並無帳號系統）；</li>
+        <li>我們不收集您的書庫、閱讀進度、歷史紀錄或來源設定；</li>
+        <li>我們不透過分析或廣告 SDK 收集行為、使用情形或裝置識別資料；</li>
+        <li>我們不向您索取或維護姓名、電子郵件清單或聯絡人等個人檔案。</li>
+      </ul>
+      <p>我們唯一會收到的資訊，是您主動選擇提交給我們的內容，例如您透過 GitHub Issues 發送的問題回報、螢幕截圖或診斷片段（詳見第 7 節），以及您主動寄送至我們聯絡信箱的電子郵件。在這些情況下，我們僅會處理您所提供的內容，以便理解並回應您的請求。</p>
+      <p>請注意，當應用程式依您的設定連線至您所選擇的來源時，此類網路請求在技術上必然會將您的裝置 IP 位址及您所請求的內容（例如搜尋字詞）傳送給該第三方或自架來源；同理，當您與我們的網站或 GitHub 互動時，GitHub 作為基礎設施供應商，可能會依其自身政策處理標準的伺服器紀錄、IP 位址與帳號／登入狀態（詳見第 6 節）。上述各項均非由 GoManga 團隊收集。</p>
+        </div>
+        <div data-t="en">
+      <p>We (the GoManga Team) do not collect the following:</p>
+      <ul>
+        <li>we do not collect GoManga account or login credentials (there is no account system);</li>
+        <li>we do not collect your library, reading progress, history, or source settings;</li>
+        <li>we do not collect behavioral, usage, or device-identifier data through analytics or advertising SDKs;</li>
+        <li>we do not request or maintain personal profiles such as names, email lists, or contacts.</li>
+      </ul>
+      <p>The only information we receive is what you actively choose to submit to us, such as an issue report, a screenshot, or a diagnostic snippet you send through GitHub Issues (see Section 7), and any email you choose to send to our contact address. In those cases, we process only the content you provide, in order to understand and respond to your request.</p>
+      <p>Note that when the app connects to a source you have chosen, as you have configured it, such network requests necessarily transmit your device's IP address and the content you request (such as search terms) to that third-party or self-hosted source; likewise, when you interact with our website or with GitHub, GitHub, acting as an infrastructure provider, may process standard server logs, IP addresses, and account/login state under its own policies (see Section 6). None of the foregoing is collected by the GoManga Team.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>兒童隱私</h2>
-      <p>GoManga 不是專為兒童設計的服務，也不會刻意收集兒童個人資料。若你認為問題回報中誤含未成年人的個人資料，請聯絡我們移除。</p>
-    </section>
+      <section id="sec-5">
+        <h2><span data-t="zh">5. 來源與網路連線</span><span data-t="en">5. Sources and Network Connections</span></h2>
+        <div data-t="zh">
+      <p>GoManga 讓您新增「儲存庫（Repositories）」並安裝或啟用「來源（Sources）」。來源可能是第三方擴充功能、遠端服務，或運行於您自己網路或裝置上的本機服務。應用程式接著會在您的指示與設定下，自這些由您設定的來源瀏覽、搜尋、開啟及顯示內容。</p>
+      <p>當應用程式連線至某個來源或來源服務時，是依照您的設定進行連線。任何此類連線所傳送的資料（例如搜尋字詞、所請求的內容，或您為該來源輸入的憑證），均依您的指示，傳送至您所選擇的來源。這些第三方或自架服務不在 GoManga 團隊的控制範圍內，並依其各自的隱私權政策與服務條款運作。</p>
+      <p>由於某些來源可能在您的本機網路上運行，或本應用程式本身可能會在您的裝置上啟動一個本機伺服器，因此 iOS 可能會提示您授予「本機網路」權限。此權限是用於與您裝置或本機網路上的本機來源服務通訊，並非用於將您的活動傳送給我們。</p>
+      <p>您須自行對所設定與存取之來源及內容的合法性與權利負完全責任，並須遵守適用法律與各來源自身的條款。GoManga 團隊不推薦任何特定來源，亦不隨附任何精選來源清單；前述內建的 Local 來源僅為一個內容中立的本機機制，並不提供或指向任何內容。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga lets you add "Repositories" and install or enable "Sources". A source may be a third-party extension, a remote service, or a local service running on your own network or device. Acting on your instruction and configuration, the app then browses, searches, opens, and displays content from those sources you configure.</p>
+      <p>When the app connects to a source or source service, it does so as you have configured it. Any data sent over such a connection (for example, search terms, the content requested, or credentials you enter for that source) is sent, at your direction, to the source you have chosen. These third-party or self-hosted services are outside the GoManga Team's control and operate under their own privacy policies and terms.</p>
+      <p>Because some sources may run on your local network, or because the app itself may host a local server on your device, iOS may prompt you to grant Local Network permission. This permission is used to communicate with local source services on your device or local network, not to transmit your activity to us.</p>
+      <p>You are solely responsible for the legality and rights of whatever sources and content you configure and access, and for complying with applicable law and each source's own terms. The GoManga Team recommends no particular source and ships no curated source list; the built-in Local source described above is only a content-agnostic local mechanism and provides or points to no content.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>政策變更</h2>
-      <p>我們可能因 app 功能、支援流程或法規需求更新本政策。更新後會調整本頁的最後更新日期。</p>
-    </section>
+      <section id="sec-6">
+        <h2><span data-t="zh">6. 網站與 GitHub</span><span data-t="en">6. Website and GitHub</span></h2>
+        <div data-t="zh">
+      <p>我們的網站（<a href="https://go-manga.github.io）託管於" rel="noopener">https://go-manga.github.io）託管於</a> GitHub Pages。本網站不加入 Google Analytics、不嵌入廣告 SDK、不進行行為追蹤，亦不使用第三方自動翻譯指令稿。</p>
+      <p>錯誤與問題回報是透過位於 <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a> 的 GitHub Issues 進行。當您瀏覽網站或使用 GitHub Issues 時，GitHub 作為託管與基礎設施供應商，可能會依其自身政策處理標準伺服器紀錄、IP 位址、帳號／登入狀態，以及您所提交的議題內容。</p>
+      <p>請注意：在 GitHub Issues 上提交的公開議題是公開可見的。其內容可供他人檢視，並可能被搜尋引擎建立索引。在公開議題中提交任何內容前，請務必審慎考量。</p>
+      <p>GitHub 對其平台上資料的處理，受 GitHub 自身的隱私權政策與條款規範，而非本政策。</p>
+        </div>
+        <div data-t="en">
+      <p>Our website (<a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a>) is hosted on GitHub Pages. The site adds no Google Analytics, embeds no advertising SDKs, performs no behavioral tracking, and uses no third-party auto-translate scripts.</p>
+      <p>Bug and issue reports go through GitHub Issues at <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a>. When you visit the website or use GitHub Issues, GitHub, as the hosting and infrastructure provider, may process standard server logs, IP addresses, account/login state, and the contents of the issues you submit, under its own policies.</p>
+      <p>Please note: public issues submitted on GitHub Issues are publicly visible. Their contents can be viewed by others and may be indexed by search engines. Consider this carefully before submitting anything in a public issue.</p>
+      <p>GitHub's processing of data on its platform is governed by GitHub's own privacy policy and terms, not by this policy.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>聯絡方式</h2>
-      <p>若你有隱私相關問題，請透過 <a href="support.html">問題回報頁</a> 建立 issue，或使用 GitHub repository 提供的聯絡方式。</p>
-    </section>
+      <section id="sec-7">
+        <h2><span data-t="zh">7. 您選擇提交的診斷與問題回報</span><span data-t="en">7. Diagnostics and Issue Reports You Choose to Submit</span></h2>
+        <div data-t="zh">
+      <p>當您選擇向我們回報問題時，您所提供的資訊可能包含下列內容：</p>
+      <ul>
+        <li>對問題的文字描述與重現步驟；</li>
+        <li>螢幕截圖；</li>
+        <li>診斷片段，例如本機紀錄摘錄、錯誤訊息，或裝置／應用程式版本資訊。</li>
+      </ul>
+      <p>我們僅會將這些資訊用於理解、診斷及修復問題，並回應您的回報。</p>
+      <p>保存期間：我們僅會在為診斷及解決相關事項、並維護問題的公開紀錄所需的期間內，保存支援電子郵件與問題回報內容。透過 GitHub Issues 提交的公開議題，將依 GitHub 的運作模式持續公開存在，直至該議題被關閉或刪除為止；其留存與移除受 GitHub 自身政策規範。</p>
+      <p>重要安全提醒：請勿在公開回報或診斷資料中提交密碼、私人權杖、完整 Cookie、付費內容、個人資料或其他機密。透過 GitHub Issues 提交的公開議題是公開可見的，且可能被搜尋引擎建立索引。在提交螢幕截圖或紀錄前，請先移除任何敏感或可識別個人身分的資訊。</p>
+        </div>
+        <div data-t="en">
+      <p>When you choose to report an issue to us, the information you provide may include the following:</p>
+      <ul>
+        <li>a text description of the problem and steps to reproduce it;</li>
+        <li>screenshots;</li>
+        <li>diagnostic snippets, such as excerpts of local logs, error messages, or device/app version information.</li>
+      </ul>
+      <p>We use this information only to understand, diagnose, and fix problems and to respond to your report.</p>
+      <p>Retention: we retain support emails and issue-report contents only for as long as needed to diagnose and resolve the matter and to maintain a public record of the issue. Public issues submitted through GitHub Issues persist publicly under GitHub's model until the issue is closed or deleted; their retention and removal are governed by GitHub's own policies.</p>
+      <p>Important security warning: do not submit passwords, private tokens, full cookies, paid content, personal data, or other secrets in public reports or diagnostics. Public issues submitted through GitHub Issues are publicly visible and may be indexed by search engines. Before submitting a screenshot or log, remove any sensitive or personally identifiable information.</p>
+        </div>
+      </section>
+
+      <section id="sec-8">
+        <h2><span data-t="zh">8. 法律依據與您的隱私權利</span><span data-t="en">8. Legal Bases and Your Privacy Rights</span></h2>
+        <div data-t="zh">
+      <p>由於 GoManga 採本機優先設計，我們所持有的個人資料極少或近乎沒有。我們唯一實際進行的處理，是處理您主動提交的內容（主要為問題回報與支援電子郵件）。就此處理，我們的法律依據為：為回應您的請求並維護應用程式之正當利益。在您主動提交內容構成同意之情形下，該同意亦可作為依據。</p>
+      <p>視適用法律而定（例如 GDPR、UK GDPR、CCPA／CPRA 或類似法規），且於符合各該權利之適用條件時，您可能就我們所持有的任何個人資料享有下列權利：</p>
+      <ul>
+        <li>存取我們所持有關於您的個人資料；</li>
+        <li>更正不正確或不完整的資料；</li>
+        <li>刪除您的資料（「被遺忘權」）；</li>
+        <li>反對基於正當利益所進行之處理（GDPR 第 21 條）；</li>
+        <li>限制特定處理行為；</li>
+        <li>在技術可行且符合適用條件時，以可攜格式取得您的資料。</li>
+      </ul>
+      <p>請注意，部分權利僅適用於特定處理依據。例如，GDPR 下的資料可攜權（第 20 條）僅適用於以同意或契約為依據、並以自動化方式進行之處理；由於我們所持有的資料主要為您提供之自由文字回報，可攜權的適用性有限。反對權則適用於以正當利益為依據之處理。</p>
+      <p>在 CCPA／CPRA 適用之情形下，我們不會因您行使隱私權利而對您有任何差別待遇。此與 GoManga 無帳號、不銷售資料、且免費提供之模式一致。</p>
+      <p>您可透過 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> 與我們聯絡以行使這些權利。請注意：由於本機優先設計，我們通常並未持有您的閱讀資料或書庫，這些資料留在您的裝置上，您可以直接於裝置上管理或刪除。對於我們確實持有的資料（主要為您提交的回報內容），我們將善意回應，並在適用法律設有法定期限時（例如 GDPR 下的一個月期限），於該期限內回應。您亦可能有權向您當地的資料保護主管機關提出申訴。</p>
+        </div>
+        <div data-t="en">
+      <p>Because GoManga is local-first, we hold little or no personal data. The only processing we actually carry out is handling the content you actively submit (primarily issue reports and support emails). For this processing, our legal basis is our legitimate interest in responding to your request and maintaining the app. Where your act of submitting content constitutes consent, that consent may also serve as a basis.</p>
+      <p>Depending on applicable law (for example, the GDPR, UK GDPR, CCPA/CPRA, or similar laws), and where the applicable conditions for each right are met, you may have the following rights regarding any personal data we hold:</p>
+      <ul>
+        <li>to access the personal data we hold about you;</li>
+        <li>to correct inaccurate or incomplete data;</li>
+        <li>to delete your data (the "right to be forgotten");</li>
+        <li>to object to processing carried out on the basis of legitimate interests (GDPR Article 21);</li>
+        <li>to restrict certain processing;</li>
+        <li>to obtain your data in a portable format, where technically feasible and the applicable conditions are met.</li>
+      </ul>
+      <p>Note that some rights apply only to certain processing bases. For example, the right to data portability under the GDPR (Article 20) applies only to processing based on consent or contract and carried out by automated means; because the data we hold is primarily free text you supply, portability has limited applicability. The right to object applies to processing based on legitimate interests.</p>
+      <p>Where the CCPA/CPRA applies, we will not discriminate against you for exercising your privacy rights. This is consistent with GoManga's no-account, no-sale-of-data, and free model.</p>
+      <p>You can contact us at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> to exercise these rights. Please note that, because of the local-first design, we generally do not hold your reading data or library; that data stays on your device, where you can manage or delete it directly. For data we do hold (primarily the contents of reports you submit), we will respond in good faith and, where a statutory deadline applies (such as one month under the GDPR), within that period. You may also have the right to lodge a complaint with your local data protection authority.</p>
+        </div>
+      </section>
+
+      <section id="sec-9">
+        <h2><span data-t="zh">9. 國際使用者與資料傳輸</span><span data-t="en">9. International Users and Data Transfers</span></h2>
+        <div data-t="zh">
+      <p>GoManga 可供全球使用者使用。由於採本機優先設計，您的應用程式資料留在您的裝置上，不會因您使用本應用程式而發生跨境傳輸給我們的情形。</p>
+      <p>當您使用我們的網站或透過 GitHub Issues 提交回報時，相關資料是由 GitHub 處理並儲存於 GitHub 的基礎設施上，該基礎設施可能位於您所在國家以外的地區。任何由 GitHub 進行之跨境處理，係依 GitHub 於其資料保護協議（Data Protection Agreement）下所維護之傳輸保護措施（例如標準契約條款或適用之資料傳輸框架）進行；此類資料係由您自行主動提交。前述處理受 GitHub 自身的政策與保護措施規範，而 GoManga 團隊並非該等保護措施之締約方。您自行設定的任何第三方或自架來源，亦可能在其自身的所在地處理資料。在向我們提交任何內容前，請審慎考量此情況。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga is available to users worldwide. Because of the local-first design, your app data stays on your device, and no cross-border transfer to us occurs as a result of your use of the app.</p>
+      <p>When you use our website or submit a report through GitHub Issues, that data is processed and stored by GitHub on GitHub's infrastructure, which may be located outside your country. Any cross-border processing by GitHub relies on the transfer safeguards GitHub maintains (for example, standard contractual clauses or applicable data-transfer frameworks) under GitHub's Data Protection Agreement, and such data is submitted by you on your own initiative. Such processing is governed by GitHub's own policies and safeguards, to which the GoManga Team is not a party. Any third-party or self-hosted source you configure may also process data in its own location. Consider this before submitting anything to us.</p>
+        </div>
+      </section>
+
+      <section id="sec-10">
+        <h2><span data-t="zh">10. 兒童隱私</span><span data-t="en">10. Children's Privacy</span></h2>
+        <div data-t="zh">
+      <p>GoManga 並非針對兒童設計，亦非以兒童為訴求對象。本應用程式與網站並非針對未滿 13 歲之兒童，我們亦不會在知情的情況下收集未滿 13 歲兒童之個人資料。由於本應用程式並無帳號系統，亦不收集裝置上的個人資料，因此在正常使用情況下，我們並未從任何使用者（包含兒童）處收集個人資料。</p>
+      <p>若我們得知曾在無意間收到來自未達適用年齡之兒童的個人資料（例如夾帶於問題回報中），我們將刪除該等資料。您亦可透過 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> 與我們聯絡，我們將採取合理步驟移除相關資訊。</p>
+      <p>GoManga 是一個來源設定框架，本身不隨附任何內容。對於您所設定的來源所存取之內容適齡與否，以及對未成年人的任何適當監督，均由您自行負責。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga is not designed for or directed to children. The app and the site are not directed to children under 13, and we do not knowingly collect personal information from children under 13. Because the app has no account system and does not collect personal data from the device, we do not, under normal use, collect personal data from any user, including children.</p>
+      <p>If we become aware that we have inadvertently received personal data from a child under the applicable age (for example, embedded in an issue report), we will delete it. You may also contact us at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>, and we will take reasonable steps to remove that information.</p>
+      <p>GoManga is a source-configuration framework and ships no content of its own. You are responsible for the age-appropriateness of content accessed through sources you configure, and for any appropriate supervision of minors.</p>
+        </div>
+      </section>
+
+      <section id="sec-11">
+        <h2><span data-t="zh">11. 安全</span><span data-t="en">11. Security</span></h2>
+        <div data-t="zh">
+      <p>GoManga 採本機優先設計，本身即提升了資料安全：由於您的書庫、進度與設定留在您的裝置上，並受 iOS 平台安全機制保護，這些資料並未集中存放於某個可能成為攻擊目標的伺服器。</p>
+      <p>您可透過維持裝置更新、使用裝置層級的保護（如密碼與生物辨識），以及審慎管理您所設定來源的憑證與存取權，進一步保護您的資料。</p>
+      <p>對於您向我們提交的有限資料，我們會採取合理措施加以保護。然而，任何透過網際網路傳輸或電子儲存的方法皆無法保證百分之百安全；在適用法律允許的範圍內，我們無法保證絕對安全，對於您自行設定之第三方或自架來源的安全性亦不負責。本節之任何內容，均不限制或排除依適用法律（例如 GDPR、CCPA／CPRA）不得排除之資料保護義務或您所享有之權利。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga's local-first design itself improves data security: because your library, progress, and settings stay on your device and are protected by iOS platform security, that data is not centralized on a server that could become a target.</p>
+      <p>You can further protect your data by keeping your device updated, using device-level protections (such as a passcode and biometrics), and carefully managing the credentials and access for the sources you configure.</p>
+      <p>For the limited data you submit to us, we take reasonable measures to protect it. However, no method of transmission over the internet or electronic storage is completely secure; to the extent permitted by applicable law, we cannot guarantee absolute security and are not responsible for the security of third-party or self-hosted sources you configure. Nothing in this Section limits or excludes any data-protection obligations or rights that cannot be excluded under applicable law (such as the GDPR or CCPA/CPRA).</p>
+        </div>
+      </section>
+
+      <section id="sec-12">
+        <h2><span data-t="zh">12. 第三方服務與連結免責聲明</span><span data-t="en">12. Third-Party Services and Links Disclaimer</span></h2>
+        <div data-t="zh">
+      <p>GoManga 可連線至您自行設定的第三方與自架服務，本政策與網站亦可能包含指向外部服務（例如 GitHub）的連結。</p>
+      <p>這些第三方或自架服務由其各自的營運者控制，並依其自身的隱私權政策與條款運作。GoManga 團隊對於這些服務的內容、運作、安全性或資料處理行為不負責任，亦不予以背書。當您透過 GoManga 存取或設定任何來源時，您與該來源營運者之間的關係，受該營運者的條款規範。</p>
+      <p>在使用任何第三方或自架服務前，我們建議您先審閱其隱私權政策與條款。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga can connect to third-party and self-hosted services that you configure, and this policy and the website may contain links to external services (such as GitHub).</p>
+      <p>These third-party or self-hosted services are controlled by their respective operators and operate under their own privacy policies and terms. The GoManga Team is not responsible for, and does not endorse, the content, operation, security, or data practices of these services. When you access or configure any source through GoManga, your relationship with that source's operator is governed by that operator's terms.</p>
+      <p>Before using any third-party or self-hosted service, we recommend that you review its privacy policy and terms.</p>
+        </div>
+      </section>
+
+      <section id="sec-13">
+        <h2><span data-t="zh">13. 本政策之變更</span><span data-t="en">13. Changes to This Policy</span></h2>
+        <div data-t="zh">
+      <p>我們可能會不時更新本隱私權政策，以反映應用程式、網站或適用法律的變動。當我們進行變更時，會更新頁面頂端的「最後更新日期」。</p>
+      <p>若有重大變更，我們將盡合理努力，例如透過網站或應用程式發布更新通知。在變更生效後，您繼續使用 GoManga，即視為接受更新後的政策。我們建議您不定期查閱本政策。</p>
+        </div>
+        <div data-t="en">
+      <p>We may update this Privacy Policy from time to time to reflect changes to the app, the website, or applicable law. When we make changes, we will update the "last updated" date at the top of the page.</p>
+      <p>For material changes, we will make reasonable efforts to provide notice, for example through the website or the app. Your continued use of GoManga after a change takes effect constitutes acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+        </div>
+      </section>
+
+      <section id="sec-14">
+        <h2><span data-t="zh">14. 聯絡我們</span><span data-t="en">14. Contact Us</span></h2>
+        <div data-t="zh">
+      <p>如對本隱私權政策有任何疑問，或欲行使任何隱私權利，請透過下列方式與我們聯絡：</p>
+      <ul>
+        <li>隱私與法律相關事宜聯絡信箱：<a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a></li>
+        <li>網站：<a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a></li>
+        <li>專案首頁：<a href="https://github.com/go-manga" rel="noopener">https://github.com/go-manga</a></li>
+        <li>錯誤與問題回報：<a href="https://github.com/go-manga/GoMangaApp/issues（請注意，公開議題為公開可見）" rel="noopener">https://github.com/go-manga/GoMangaApp/issues（請注意，公開議題為公開可見）</a></li>
+      </ul>
+      <p>對於涉及個人或機密資訊的請求，請使用上述電子郵件信箱，而非公開議題。</p>
+        </div>
+        <div data-t="en">
+      <p>If you have any questions about this Privacy Policy, or wish to exercise any privacy right, please contact us as follows:</p>
+      <ul>
+        <li>Privacy and legal contact: <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a></li>
+        <li>Website: <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a></li>
+        <li>Project home: <a href="https://github.com/go-manga" rel="noopener">https://github.com/go-manga</a></li>
+        <li>Bug and issue reports: <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a> (note that public issues are publicly visible)</li>
+      </ul>
+      <p>For requests involving personal or confidential information, please use the email address above rather than a public issue.</p>
+        </div>
+      </section>
+
+      <section id="sec-15">
+        <h2><span data-t="zh">15. 準據語言條款</span><span data-t="en">15. Controlling Language</span></h2>
+        <div data-t="zh">
+      <p>本隱私權政策以繁體中文與英文提供。繁體中文版本為準據且具權威性之文本；英文版本僅供參考之翻譯。</p>
+      <p>若繁體中文版本與英文版本之間有任何差異或不一致，概以繁體中文版本為準。</p>
+      <p>本政策生效日／最後更新日為 2026 年 6 月 20 日。</p>
+        </div>
+        <div data-t="en">
+      <p>This Privacy Policy is provided in Traditional Chinese and English. The Traditional Chinese version is the controlling and authoritative text; the English version is a convenience translation.</p>
+      <p>In the event of any difference or inconsistency between the Traditional Chinese and English versions, the Traditional Chinese version prevails.</p>
+      <p>This policy is effective and was last updated on June 20, 2026.</p>
+        </div>
+      </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <a href="terms.html">使用條款</a>
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 GoManga Team</span>
+        <span>
+          <a href="privacy.html"><span data-t="zh">隱私權政策</span><span data-t="en">Privacy</span></a> ·
+          <a href="terms.html"><span data-t="zh">使用條款</span><span data-t="en">Terms</span></a> ·
+          <a href="mailto:gomanga.support@gmail.com"><span data-t="zh">聯絡我們</span><span data-t="en">Contact</span></a>
+        </span>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

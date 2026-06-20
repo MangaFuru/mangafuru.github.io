@@ -1,73 +1,126 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="常見問題 | GoManga"
+  data-title-en="FAQ | GoManga"
+  data-desc-zh="GoManga 常見問題：來源、內容、資料、支援、GitHub issue 與隱私邊界。"
+  data-desc-en="GoManga FAQ: sources, content, data, support, GitHub issues, and privacy boundaries.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FAQ | GoManga</title>
-  <meta name="description" content="GoManga FAQ：來源、內容、資料、支援、GitHub issue 與隱私邊界。">
+  <title>常見問題 | GoManga</title>
+  <meta name="description" content="GoManga 常見問題：來源、內容、資料、支援、GitHub issue 與隱私邊界。">
+  <meta property="og:title" content="GoManga FAQ">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="document-page">
+<body class="doc-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a href="getting-started.html">上手</a>
-      <a aria-current="page" href="faq.html">FAQ</a>
-      <a href="support.html">回報問題</a>
-      <a href="privacy.html">隱私</a>
-      <a href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a aria-current="page" href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
-  <main class="document-shell">
-    <p class="section-kicker">FAQ</p>
-    <h1>常見問題</h1>
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">常見問題</span><span data-t="en">FAQ</span></p>
+      <h1 class="doc-title"><span data-t="zh">常見問題</span><span data-t="en">Frequently asked</span></h1>
+      <p class="updated">
+        <span data-t="zh">關於來源、內容、資料與回報的邊界，這裡有最直接的答案。</span>
+        <span data-t="en">The most direct answers on sources, content, data, and reporting boundaries.</span>
+      </p>
+    </div>
+  </section>
 
-    <section>
-      <h2>GoManga 會提供漫畫內容或來源清單嗎？</h2>
-      <p>不會。GoManga 是閱讀器與來源設定框架，不代管、不販售、不散佈漫畫內容，也不提供官方內容目錄。來源、檔案與內容由你自行設定與管理。</p>
-    </section>
+  <main class="doc-shell doc-body">
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary><span data-t="zh">我可以讀自己的 EPUB、PDF、CBZ 檔案嗎？</span><span data-t="en">Can I read my own EPUB, PDF, and CBZ files?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">可以。GoManga 內建本機閱讀，能直接開啟你裝置或本機網路上的 EPUB、PDF 與 CBZ，並保留續讀進度。這些是你自己提供的檔案，App 不代管也不散佈任何內容。</span><span data-t="en">Yes. GoManga includes local reading and can open EPUB, PDF, and CBZ files on your device or local network, with resume preserved. These are files you supply yourself — the app hosts and distributes no content.</span></p></div>
+      </details>
 
-    <section>
-      <h2>為什麼需要 Repositories 和 Sources？</h2>
-      <p>Repositories 是來源資訊的入口；Sources 是實際瀏覽、搜尋、開啟詳情與載入章節的來源。這個流程讓 app 可以把來源設定、書庫、清單與閱讀器分開管理。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">GoManga 可以連我自架的 Komga 伺服器嗎？</span><span data-t="en">Does GoManga work with my own Komga server?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">可以。GoManga 能連到你自行架設的 Komga 伺服器，閱讀你整理在上面的書庫。Komga 由你自己部署與管理，GoManga 僅作為讀取端，不託管你的伺服器或內容。</span><span data-t="en">Yes. GoManga can connect to a Komga server you host yourself and read the library you organized there. You deploy and manage Komga; GoManga acts only as the reader and hosts neither your server nor its content.</span></p></div>
+      </details>
 
-    <section>
-      <h2>GoManga 可以保證某個來源一定可用嗎？</h2>
-      <p>不能。第三方來源可能改版、下線、要求登入、觸發驗證、限制地區或修改使用條款。GoManga 可以協助把 app 端問題修好，但無法控制第三方來源。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">GoManga 會提供漫畫內容或來源清單嗎？</span><span data-t="en">Does GoManga provide manga content or a list of sources?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">不會。GoManga 是閱讀器與來源設定框架，不代管、不販售、不散佈漫畫內容，也不提供官方內容目錄。來源、檔案與內容由你自行設定與管理。</span><span data-t="en">No. GoManga is a reader and a source-configuration framework. It does not host, sell, or distribute manga content, and ships no official catalog. Sources, files, and content are yours to configure and manage.</span></p></div>
+      </details>
 
-    <section>
-      <h2>我該如何回報 bug？</h2>
-      <p>請使用 <a href="support.html">回報問題</a>，提供發生位置、app 版本、iOS 版本、裝置、來源 host、重現步驟、預期結果與實際結果。請不要貼完整 cookie、token、帳密或付費內容。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">為什麼需要 Repositories 和 Sources？</span><span data-t="en">Why are there both repositories and sources?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">Repositories 是來源資訊的入口；Sources 是實際瀏覽、搜尋、開啟詳情與載入章節的來源。這個流程讓 App 可以把來源設定、書庫、清單與閱讀器分開管理。</span><span data-t="en">A repository is the entry point for source information; a source is what actually browses, searches, opens details, and loads chapters. Splitting them lets the app manage source setup, library, lists, and the reader separately.</span></p></div>
+      </details>
 
-    <section>
-      <h2>診斷日誌可以公開貼上嗎？</h2>
-      <p>請先檢查內容。若包含私密 token、完整 cookie、帳號資訊、個人資料或付費內容，請不要公開提交。公開 issue 可能被其他人看見。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">GoManga 可以保證某個來源一定可用嗎？</span><span data-t="en">Can GoManga guarantee a given source keeps working?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">不能。第三方來源可能改版、下線、要求登入、觸發驗證、限制地區或修改使用條款。GoManga 可以協助把 App 端問題修好，但無法控制第三方來源。</span><span data-t="en">No. Third-party sources can change, go offline, require login, trigger verification, restrict regions, or change their terms. GoManga can help fix app-side problems, but it has no control over third-party sources.</span></p></div>
+      </details>
 
-    <section>
-      <h2>網站會追蹤我嗎？</h2>
-      <p>GoManga 網站不加入第三方 analytics、廣告 SDK 或自動翻譯腳本。網站由 GitHub Pages 提供，GitHub 仍可能依自身政策處理標準伺服器記錄與登入狀態。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">我該如何回報 bug？</span><span data-t="en">How do I report a bug?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">請使用 <a href="support.html">回報問題</a>，提供發生位置、App 版本、iOS 版本、裝置、來源 host、重現步驟、預期結果與實際結果。請不要貼完整 cookie、token、帳密或付費內容。</span><span data-t="en">Use <a href="support.html">Report an issue</a>, with the area, app version, iOS version, device, source host, steps to reproduce, expected result, and actual result. Do not paste full cookies, tokens, credentials, or paid content.</span></p></div>
+      </details>
 
-    <section>
-      <h2>我可以要求支援特定來源嗎？</h2>
-      <p>可以回報 app 行為問題，但請不要把 issue 當作來源推薦清單或內容索引。若來源本身要求登入、授權或特定設定，請先確認你有權使用。</p>
-    </section>
+      <details class="faq-item">
+        <summary><span data-t="zh">診斷日誌可以公開貼上嗎？</span><span data-t="en">Can I post diagnostic logs publicly?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">請先檢查內容。若包含私密 token、完整 cookie、帳號資訊、個人資料或付費內容，請不要公開提交。公開 issue 可能被其他人看見。</span><span data-t="en">Review them first. If they contain private tokens, full cookies, account details, personal data, or paid content, do not post them publicly. Public issues can be seen by anyone.</span></p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-t="zh">網站會追蹤我嗎？</span><span data-t="en">Does this website track me?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">GoManga 網站不加入第三方分析、廣告 SDK 或自動翻譯腳本。網站由 GitHub Pages 提供，GitHub 仍可能依自身政策處理標準伺服器記錄與登入狀態。</span><span data-t="en">The GoManga site adds no third-party analytics, ad SDKs, or auto-translate scripts. It's served from GitHub Pages, and GitHub may still process standard server logs and login state under its own policies.</span></p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-t="zh">我可以要求支援特定來源嗎？</span><span data-t="en">Can I request support for a specific source?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">可以回報 App 行為問題，但請不要把 issue 當作來源推薦清單或內容索引。若來源本身要求登入、授權或特定設定，請先確認你有權使用。</span><span data-t="en">You can report app-behavior problems, but please don't use issues as a source-recommendation list or content index. If a source requires login, authorization, or specific setup, confirm you have the right to use it first.</span></p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-t="zh">我的資料存在哪裡？換手機會不見嗎？</span><span data-t="en">Where is my data stored? Do I lose it on a new phone?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">書庫、進度、清單與偏好主要保存在你的裝置上，沒有 GoManga 帳號系統。請自行備份重要設定；重裝、換機或系統異常都可能造成本機資料變動或遺失。</span><span data-t="en">Your library, progress, lists, and preferences live mainly on your device — there is no GoManga account. Back up anything important yourself; reinstalling, switching devices, or system issues can change or lose local data.</span></p></div>
+      </details>
+    </div>
+
+    <div class="doc-note" style="margin-top:28px">
+      <span data-t="zh">沒找到答案？看看 <a href="getting-started.html">上手指南</a>，或到 <a href="support.html">回報問題</a> 建立 issue。</span>
+      <span data-t="en">Didn't find it? See the <a href="getting-started.html">getting-started guide</a>, or open an issue from <a href="support.html">Report an issue</a>.</span>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <a href="support.html">回報問題</a>
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 GoManga Team</span>
+        <span>
+          <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a> ·
+          <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a> ·
+          <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a> ·
+          <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        </span>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

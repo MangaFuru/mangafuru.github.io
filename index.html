@@ -1,118 +1,239 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="GoManga | iOS 漫畫閱讀器"
+  data-title-en="GoManga | iOS Manga Reader"
+  data-desc-zh="GoManga 是為 iOS 打造的本機優先漫畫／漫畫閱讀器。連上你自架的 Komga 伺服器，或直接讀本機的 EPUB、PDF、CBZ，來源由你掌握，App 不代管內容、不追蹤你。"
+  data-desc-en="GoManga is a local-first manga & comic reader for iOS. Connect to your own self-hosted Komga server or read local EPUB, PDF, and CBZ files — you stay in control, the app hosts no content and doesn't track you.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GoManga | iOS 漫畫閱讀器</title>
-  <meta name="description" content="GoManga 是為 iOS 打造的漫畫閱讀體驗，讓收藏、續讀與清單保持乾淨順手。">
+  <meta name="description" content="GoManga 是為 iOS 打造的本機優先漫畫／漫畫閱讀器。連上你自架的 Komga 伺服器，或直接讀本機的 EPUB、PDF、CBZ，來源由你掌握，App 不代管內容、不追蹤你。">
   <meta property="og:title" content="GoManga">
-  <meta property="og:description" content="為 iOS 打造的可設定漫畫閱讀器。">
-  <meta property="og:image" content="assets/app-icon.png">
+  <meta property="og:description" content="連上你自架的 Komga，或讀本機 EPUB／PDF／CBZ。本機優先、不追蹤，來源由你掌握。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a href="getting-started.html">上手</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">回報問題</a>
-      <a href="privacy.html">隱私</a>
-      <a href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
+    <section class="hero">
+      <div class="hero-speed" aria-hidden="true"></div>
+      <div class="hero-halftone" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
         <img class="hero-logo" src="assets/launch-logo.png" alt="GoManga" width="320" height="227">
-        <p class="eyebrow">iOS Manga Reader</p>
-        <h1 id="hero-title">GoManga</h1>
-        <p class="hero-lede">把收藏、續讀與清單整理成一個乾淨俐落的閱讀主場。</p>
-        <div class="hero-actions" aria-label="主要操作">
-          <a class="button primary" href="getting-started.html">開始使用</a>
-          <a class="button secondary" href="support.html">回報問題</a>
+        <p class="kicker"><span data-t="zh">iOS 漫畫閱讀器</span><span data-t="en">iOS Manga Reader</span></p>
+        <h1>Go<span class="accent">Manga</span></h1>
+        <p class="hero-lede">
+          <span data-t="zh">把你自己的書庫整理成一個乾淨俐落的閱讀主場——連上你自架的 Komga 伺服器，或直接讀裝置上的 EPUB、PDF、CBZ，以及你自行設定的任何來源。App 不代管內容，專心把閱讀體驗做好。</span>
+          <span data-t="en">A clean home base for the library you own — connect to your own self-hosted Komga server, read EPUB, PDF, and CBZ files right on your device, and add any source you configure. The app hosts no content and focuses on the read.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="getting-started.html"><span data-t="zh">開始使用</span><span data-t="en">Get started</span></a>
+          <a class="btn btn--ghost" href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report an issue</span></a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge"><b>iOS 18+</b> SwiftUI</span>
+          <span class="badge"><b>·</b> <span data-t="zh">自架 Komga</span><span data-t="en">Self-hosted Komga</span></span>
+          <span class="badge"><b>·</b> EPUB · PDF · CBZ</span>
+          <span class="badge"><b>·</b> <span data-t="zh">本機優先</span><span data-t="en">Local-first</span></span>
+          <span class="badge"><b>·</b> <span data-t="zh">不追蹤</span><span data-t="en">No tracking</span></span>
+          <span class="badge"><b>·</b> <span data-t="zh">來源自管</span><span data-t="en">Any source you configure</span></span>
         </div>
       </div>
     </section>
 
-    <section class="intro-band" aria-label="App 預覽">
-      <div class="shell preview-layout">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>GO! · READ · RESUME · COLLECT · GO! · READ · RESUME · COLLECT&nbsp;</span>
+        <span>GO! · READ · RESUME · COLLECT · GO! · READ · RESUME · COLLECT&nbsp;</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker"><span data-t="zh">你自己的書庫</span><span data-t="en">Your own library</span></p>
+          <h2 class="section-title">
+            <span data-t="zh">你已經擁有的內容，原地就能讀。</span>
+            <span data-t="en">Read what you already own, right where it lives.</span>
+          </h2>
+          <p class="lead">
+            <span data-t="zh">GoManga 主打兩種最單純的閱讀來源——你自架的 Komga 伺服器，與你裝置上的檔案。其餘來源由你自行設定。</span>
+            <span data-t="en">GoManga leads with the two simplest sources — the Komga server you host and the files on your device. Everything else is yours to configure.</span>
+          </p>
+        </div>
+        <div class="panels cols-3">
+          <article class="panel">
+            <span class="panel-num">01</span>
+            <h3><span data-t="zh">連上你自架的 Komga</span><span data-t="en">Connect your own Komga</span></h3>
+            <p><span data-t="zh">連到你自己架設的 Komga 伺服器，直接閱讀你整理在上面的漫畫、圖像小說與電子書。伺服器與內容都是你的，GoManga 只是讀取端。</span><span data-t="en">Connect to the Komga server you host yourself and read the comics, graphic novels, and ebooks you organized there. The server and content are yours — GoManga is just the reader.</span></p>
+          </article>
+          <article class="panel">
+            <span class="panel-num">02</span>
+            <h3><span data-t="zh">讀你自己的檔案</span><span data-t="en">Read your own files</span></h3>
+            <p><span data-t="zh">直接開啟裝置或本機網路上的 EPUB、PDF 與 CBZ，續讀進度與閱讀方向都接得上同一個脈絡。你擁有的檔案，原地就能讀。</span><span data-t="en">Open EPUB, PDF, and CBZ files on your device or local network, with resume and reading direction carried through. The files you own, read in place.</span></p>
+          </article>
+          <article class="panel">
+            <span class="panel-num">03</span>
+            <h3><span data-t="zh">來源由你掌握</span><span data-t="en">Sources stay in your hands</span></h3>
+            <p><span data-t="zh">除了 Komga 與本機檔案，你也可以自行設定其他來源。GoManga 不附目錄、不推薦來源——加入哪些、是否有權使用，都由你決定。</span><span data-t="en">Beyond Komga and local files, you can configure other sources yourself. GoManga ships no catalog and recommends none — what you add, and whether you may use it, is your call.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
         <div>
-          <p class="section-kicker">Reading flow</p>
-          <h2>打開 GoManga，就回到你的閱讀節奏。</h2>
-          <p>從書庫回到續讀，從清單找回想看的作品，再進入專注的閱讀畫面。</p>
+          <p class="kicker"><span data-t="zh">閱讀節奏</span><span data-t="en">Reading flow</span></p>
+          <h2 class="section-title">
+            <span data-t="zh">打開 GoManga，就回到你的閱讀節奏。</span>
+            <span data-t="en">Open GoManga and drop straight back into your rhythm.</span>
+          </h2>
+          <p class="lead">
+            <span data-t="zh">從書庫回到續讀，從清單找回想看的作品，再進入專注的閱讀畫面——每一步都接得上同一個脈絡。</span>
+            <span data-t="en">From library to resume, from your lists back to the title you wanted, into a focused reading view — every step stays in one continuous thread.</span>
+          </p>
         </div>
-        <div class="phone-strip" aria-label="GoManga launch previews">
-          <img src="assets/launch-bg-1.png" alt="GoManga launch preview 1">
-          <img src="assets/launch-bg-3.png" alt="GoManga launch preview 2">
-          <img src="assets/launch-bg-5.png" alt="GoManga launch preview 3">
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="section" aria-labelledby="features-title">
-      <div class="shell">
-        <p class="section-kicker">Daily reading</p>
-        <h2 id="features-title">為每天會用的閱讀流程設計。</h2>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>收藏一眼掌握</h3>
-            <p>用清楚的書庫視圖整理想追的作品，讓目前的閱讀狀態保持可掃描。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>續讀自然銜接</h3>
-            <p>回到上次停下的位置，讓章節、進度與閱讀方向延續同一個脈絡。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>閱讀畫面專注</h3>
-            <p>把注意力留給畫面本身，減少干擾，保留需要時才出現的操作。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">04</span>
-            <h3>清單不打結</h3>
-            <p>稍後閱讀與閱讀歷史分開整理，想追、想補、想回看的內容各就各位。</p>
-          </article>
+        <div class="phone-strip" aria-label="GoManga launch art">
+          <img class="phone" src="assets/launch-bg-1.png" alt="GoManga launch artwork" loading="lazy">
+          <img class="phone" src="assets/launch-bg-3.png" alt="GoManga launch artwork" loading="lazy">
+          <img class="phone" src="assets/launch-bg-5.png" alt="GoManga launch artwork" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="section split-band" aria-labelledby="docs-title">
-      <div class="shell split-layout">
-        <div>
-          <p class="section-kicker">GoManga</p>
-          <h2 id="docs-title">準備好時，就開始整理你的閱讀。</h2>
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker"><span data-t="zh">每天會用的流程</span><span data-t="en">Daily reading</span></p>
+          <h2 class="section-title">
+            <span data-t="zh">為每天會用的閱讀流程設計。</span>
+            <span data-t="en">Designed around what you do every day.</span>
+          </h2>
         </div>
-        <div class="link-panel">
-          <a href="getting-started.html">
-            <strong>開始使用</strong>
-            <span>快速完成基本設定，建立你的第一個閱讀流程。</span>
-          </a>
-          <a href="support.html">
-            <strong>回報問題</strong>
-            <span>遇到問題時，提供重現步驟協助我們定位。</span>
-          </a>
-          <a href="privacy.html">
-            <strong>隱私政策</strong>
-            <span>查看資料與公開回報的處理方式。</span>
-          </a>
+        <div class="panels">
+          <article class="panel">
+            <span class="panel-num">01</span>
+            <h3><span data-t="zh">收藏一眼掌握</span><span data-t="en">Library at a glance</span></h3>
+            <p><span data-t="zh">用清楚的書庫視圖整理想追的作品，讓目前的閱讀狀態保持可掃描。</span><span data-t="en">Organize what you follow in a clean library view, with current status that stays scannable.</span></p>
+          </article>
+          <article class="panel">
+            <span class="panel-num">02</span>
+            <h3><span data-t="zh">續讀自然銜接</span><span data-t="en">Resume that just works</span></h3>
+            <p><span data-t="zh">回到上次停下的位置，讓章節、進度與閱讀方向延續同一個脈絡。</span><span data-t="en">Return to where you left off, with chapter, progress, and reading direction carried through.</span></p>
+          </article>
+          <article class="panel">
+            <span class="panel-num">03</span>
+            <h3><span data-t="zh">閱讀畫面專注</span><span data-t="en">A focused reader</span></h3>
+            <p><span data-t="zh">把注意力留給畫面本身，減少干擾，保留需要時才出現的操作。</span><span data-t="en">Keep attention on the page; controls stay out of the way until you need them.</span></p>
+          </article>
+          <article class="panel">
+            <span class="panel-num">04</span>
+            <h3><span data-t="zh">清單不打結</span><span data-t="en">Lists that stay untangled</span></h3>
+            <p><span data-t="zh">稍後閱讀與閱讀歷史分開整理，想追、想補、想回看的內容各就各位。</span><span data-t="en">Read-later and history stay separate, so what to follow, catch up on, or revisit each has its place.</span></p>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker"><span data-t="zh">定位很清楚</span><span data-t="en">Where we stand</span></p>
+          <h2 class="section-title">
+            <span data-t="zh">GoManga 是什麼——以及不是什麼。</span>
+            <span data-t="en">What GoManga is — and what it is not.</span>
+          </h2>
+          <p class="lead">
+            <span data-t="zh">GoManga 是閱讀器與來源設定框架，不代管漫畫內容。來源、檔案與存取權限都由你自行設定與負責。</span>
+            <span data-t="en">GoManga is a reader and a source-configuration framework. It hosts no manga content — the sources, files, and access rights are yours to configure and own.</span>
+          </p>
+        </div>
+        <ul class="pledge">
+          <li><span data-t="zh"><b>讀你擁有的書庫</b>：你自架的 Komga、本機檔案，以及你自行設定的來源——全部由你掌握。</span><span data-t="en"><b>Reads the library you own</b>: your self-hosted Komga, local files, and the sources you configure — all in your hands.</span></li>
+          <li class="is-no"><span data-t="zh"><b>不代管內容</b>：不上傳、不販售、不散佈漫畫，也沒有官方內容目錄。</span><span data-t="en"><b>Hosts no content</b>: no uploading, selling, or distributing manga, and no official catalog.</span></li>
+          <li><span data-t="zh"><b>本機優先</b>：書庫、進度、清單與偏好主要保存在你的裝置上。</span><span data-t="en"><b>Local-first</b>: your library, progress, lists, and preferences live mainly on your device.</span></li>
+          <li class="is-no"><span data-t="zh"><b>不推薦來源</b>：不提供來源清單或內容索引，也不協助繞過登入或付費。</span><span data-t="en"><b>Recommends no sources</b>: no source lists or content indexes, and no help bypassing logins or paywalls.</span></li>
+          <li><span data-t="zh"><b>不追蹤你</b>：本網站不加入第三方分析、廣告 SDK 或行為追蹤。</span><span data-t="en"><b>Doesn't track you</b>: no third-party analytics, ad SDKs, or behavioral tracking on this site.</span></li>
+          <li class="is-no"><span data-t="zh"><b>不取代你的判斷</b>：你需確認自己有權存取與使用相關內容。</span><span data-t="en"><b>Doesn't replace your judgment</b>: you confirm you have the right to access and use the content.</span></li>
+        </ul>
       </div>
     </section>
   </main>
 
+  <section class="cta">
+    <div class="wrap">
+      <h2><span data-t="zh">準備好了，就開始。</span><span data-t="en">Ready when you are.</span></h2>
+      <p><span data-t="zh">幾分鐘完成基本設定，建立你的第一個閱讀流程。</span><span data-t="en">A few minutes of setup, and your first reading flow is live.</span></p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn--primary" href="getting-started.html"><span data-t="zh">開始使用</span><span data-t="en">Get started</span></a>
+        <a class="btn btn--ghost" href="faq.html"><span data-t="zh">先看常見問題</span><span data-t="en">Read the FAQ</span></a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="assets/app-icon.png" alt="" width="36" height="36"><span>GoManga</span></div>
+          <p class="footer-blurb"><span data-t="zh">為 iOS 打造的本機優先漫畫／漫畫閱讀器。連上你自架的 Komga 或本機檔案，不代管內容、不追蹤。</span><span data-t="en">A local-first manga &amp; comic reader for iOS. Connect to your own Komga or local files — no hosted content, no tracking.</span></p>
+        </div>
+        <div class="footer-col">
+          <h4><span data-t="zh">產品</span><span data-t="en">Product</span></h4>
+          <a href="index.html"><span data-t="zh">首頁</span><span data-t="en">Home</span></a>
+          <a href="getting-started.html"><span data-t="zh">上手指南</span><span data-t="en">Get started</span></a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4><span data-t="zh">支援</span><span data-t="en">Support</span></h4>
+          <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report an issue</span></a>
+          <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">GitHub Issues</a>
+          <a href="https://github.com/go-manga" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <h4><span data-t="zh">法律</span><span data-t="en">Legal</span></h4>
+          <a href="privacy.html"><span data-t="zh">隱私權政策</span><span data-t="en">Privacy</span></a>
+          <a href="terms.html"><span data-t="zh">使用條款</span><span data-t="en">Terms</span></a>
+          <a href="oss.html"><span data-t="zh">開放原始碼</span><span data-t="en">Open source</span></a>
+          <a href="mailto:gomanga.support@gmail.com"><span data-t="zh">聯絡我們</span><span data-t="en">Contact</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 GoManga Team</span>
+        <span><span data-t="zh">本網站不含第三方分析或廣告追蹤。</span><span data-t="en">No third-party analytics or ad tracking on this site.</span></span>
+      </div>
+      <p style="margin:14px 0 0;color:var(--ink-dim);font-size:12px;line-height:1.6">
+        <span data-t="zh">「Komga」為其各自所有者之商標；GoManga 與 Komga 並無從屬或背書關係。GoManga 不代管漫畫內容，來源與存取權限由使用者自行設定與負責。</span>
+        <span data-t="en">“Komga” is a trademark of its respective owner; GoManga is not affiliated with or endorsed by Komga. GoManga hosts no manga content — sources and access rights are configured and owned by the user.</span>
+      </p>
     </div>
   </footer>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

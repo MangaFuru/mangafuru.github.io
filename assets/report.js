@@ -58,10 +58,17 @@
     }
     await navigator.clipboard.writeText(buildBody());
     if (copyButton) {
-      const originalText = copyButton.textContent;
-      copyButton.textContent = "已複製";
+      // Mutate the existing bilingual <span> nodes via textContent only
+      // (XSS-safe, and the active-language span stays the visible one).
+      const zh = copyButton.querySelector('[data-t="zh"]');
+      const en = copyButton.querySelector('[data-t="en"]');
+      const prevZh = zh ? zh.textContent : "";
+      const prevEn = en ? en.textContent : "";
+      if (zh) zh.textContent = "已複製";
+      if (en) en.textContent = "Copied";
       window.setTimeout(function () {
-        copyButton.textContent = originalText;
+        if (zh) zh.textContent = prevZh;
+        if (en) en.textContent = prevEn;
       }, 1800);
     }
   }

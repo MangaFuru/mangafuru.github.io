@@ -1,88 +1,427 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="使用條款 | GoManga"
+  data-title-en="Terms of Use | GoManga"
+  data-desc-zh="GoManga 使用條款：服務定位、來源責任、內容權利、問題回報、免責聲明與責任限制。"
+  data-desc-en="GoManga Terms of Use: what the service is, source responsibility, content rights, reporting, disclaimers, and limitation of liability.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>使用條款 | GoManga</title>
-  <meta name="description" content="GoManga 使用條款：說明 app 使用、來源責任、內容權利、問題回報與免責聲明。">
+  <meta name="description" content="GoManga 使用條款：服務定位、來源責任、內容權利、問題回報、免責聲明與責任限制。">
+  <meta property="og:title" content="GoManga 使用條款">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="document-page">
+<body class="doc-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a href="getting-started.html">上手</a>
-      <a href="faq.html">FAQ</a>
-      <a href="support.html">回報問題</a>
-      <a href="privacy.html">隱私</a>
-      <a aria-current="page" href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a aria-current="page" href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
-  <main class="document-shell">
-    <p class="section-kicker">Terms of Use</p>
-    <h1>GoManga 使用條款</h1>
-    <p class="updated">最後更新：2026 年 6 月 20 日</p>
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="hero-halftone" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">使用條款</span><span data-t="en">Terms of Use</span></p>
+      <h1 class="doc-title"><span data-t="zh">GoManga 使用條款</span><span data-t="en">GoManga Terms of Use</span></h1>
+      <p class="updated"><span data-t="zh">最後更新：2026 年 6 月 20 日</span><span data-t="en">Last updated: June 20, 2026</span></p>
+    </div>
+  </section>
 
-    <section>
-      <h2>接受條款</h2>
-      <p>使用 GoManga app、本網站或相關支援入口，即表示你同意本使用條款與 <a href="privacy.html">隱私政策</a>。若你不同意，請停止使用。</p>
-    </section>
+  <main class="doc-shell doc-body">
+    <div class="summary-card">
+      <p data-t="zh">GoManga 是一款本機優先的 iOS 漫畫閱讀器，本身不託管、上傳、儲存、販售、散布或索引任何漫畫內容，亦不提供官方內容目錄或來源推薦。您透過新增「儲存庫」、安裝並啟用「來源」（第三方擴充功能、遠端服務或您自有裝置／網路上的本機服務）來瀏覽、搜尋及閱讀內容；所有來源、檔案、帳號、憑證與存取權限均由您自行設定與控制。本 App 所授予之授權僅及於 App 軟體本身，不就任何內容、來源或第三方素材授予您任何權利，亦不賦予您存取您本不得合法存取之內容的任何權限。您須自行負責所設定及存取之來源與內容的合法性與權利，包括不得用以存取未經權利人授權之內容，並須遵守適用法律及各來源自身的條款。本 App 採本機優先設計，除非您主動提交（例如問題回報、截圖或診斷片段），否則資料不會離開您的裝置。請勿在公開回報中提交密碼、私密權杖、完整 Cookie、付費內容或個人資料。本服務以「現狀」及「現有可用」基礎提供，責任在適用法律允許之最大範圍內受限；惟死亡或人身傷害、詐欺、重大過失或故意，以及依法不得排除之責任，均不在排除或限制之列，並保留您居住地強制性消費者保護法所賦予之權利。繁體中文版為準據版本，英文版僅供參考。</p>
+      <p data-t="en">GoManga is a local-first iOS manga reader. It does not host, upload, store, sell, distribute, or index any manga content, and ships no official catalog or source recommendations. You browse, search, and read content by adding "Repositories" and installing and enabling "Sources" (third-party extensions, remote services, or local services on your own device or network); all sources, files, accounts, credentials, and access rights are configured and controlled by you. The licence granted in the App covers only the App software itself; it grants you no rights in any content, source, or third-party material, and confers no authority to access content you are not independently and lawfully entitled to access. You are solely responsible for the legality and rights of whatever sources and content you configure and access, including not using the App to access content made available without the rights holder's authorization, and for complying with applicable law and each source's own terms. The App is local-first: nothing leaves your device unless you actively submit it (such as an issue report, screenshot, or diagnostic snippet). Do not submit passwords, private tokens, full cookies, paid content, or personal data in public reports. The service is provided "AS IS" and "AS AVAILABLE," and liability is limited to the maximum extent permitted by applicable law; however, liability for death or personal injury, fraud, gross negligence or willful misconduct, and any liability that cannot be excluded under law, is not excluded or limited, and the mandatory consumer-protection rights of your place of residence are preserved. The Traditional Chinese version is the controlling text; the English version is a convenience translation.</p>
+    </div>
 
-    <section>
-      <h2>服務定位</h2>
-      <p>GoManga 是 iOS 漫畫閱讀器與來源設定框架。GoManga Team 不代管、不上傳、不販售、不散佈漫畫內容，也不提供官方內容目錄或第三方來源清單。</p>
-      <p>你加入的來源、來源服務、網站、檔案或內容由你自行設定與管理。你必須確認自己有權存取與使用相關內容。</p>
-    </section>
+    <div class="doc-note">
+      <span data-t="zh"><strong>說明：</strong>本文件同時涵蓋 GoManga App、官方網站與透過 GitHub Issues 進行的問題回報。繁體中文版為準據且具拘束力之版本，英文版僅供參考翻譯。</span>
+      <span data-t="en"><strong>Note:</strong> this document covers the GoManga app, the official website, and issue reporting via GitHub Issues. The Traditional Chinese version is the controlling, binding text; the English version is a convenience translation.</span>
+    </div>
 
-    <section>
-      <h2>使用者責任</h2>
+    <nav class="toc" aria-label="Terms contents">
+      <h2><span data-t="zh">目錄</span><span data-t="en">Contents</span></h2>
+      <ol>
+          <li><a href="#sec-1"><span data-t="zh">1. 接受條款與資格</span><span data-t="en">1. Acceptance and Eligibility</span></a></li>
+          <li><a href="#sec-2"><span data-t="zh">2. 定義</span><span data-t="en">2. Definitions</span></a></li>
+          <li><a href="#sec-3"><span data-t="zh">3. GoManga 是什麼、不是什麼</span><span data-t="en">3. What GoManga Is and Is Not</span></a></li>
+          <li><a href="#sec-4"><span data-t="zh">4. 使用授權與 Apple 相關條款</span><span data-t="en">4. Licence to Use and Apple-Required Terms</span></a></li>
+          <li><a href="#sec-5"><span data-t="zh">5. 您的責任與可接受使用</span><span data-t="en">5. Your Responsibilities and Acceptable Use</span></a></li>
+          <li><a href="#sec-6"><span data-t="zh">6. 第三方來源與服務</span><span data-t="en">6. Third-Party Sources and Services</span></a></li>
+          <li><a href="#sec-7"><span data-t="zh">7. 您的提交內容</span><span data-t="en">7. Your Submissions</span></a></li>
+          <li><a href="#sec-8"><span data-t="zh">8. 智慧財產權</span><span data-t="en">8. Intellectual Property</span></a></li>
+          <li><a href="#sec-9"><span data-t="zh">9. 著作權、通知移除與反誘導政策</span><span data-t="en">9. Copyright, Takedown, and No-Inducement Policy</span></a></li>
+          <li><a href="#sec-10"><span data-t="zh">10. 免責聲明</span><span data-t="en">10. Disclaimers</span></a></li>
+          <li><a href="#sec-11"><span data-t="zh">11. 責任限制</span><span data-t="en">11. Limitation of Liability</span></a></li>
+          <li><a href="#sec-12"><span data-t="zh">12. 補償</span><span data-t="en">12. Indemnification</span></a></li>
+          <li><a href="#sec-13"><span data-t="zh">13. 期間、終止與暫停</span><span data-t="en">13. Term, Termination, and Suspension</span></a></li>
+          <li><a href="#sec-14"><span data-t="zh">14. 條款之變更</span><span data-t="en">14. Changes to the Terms</span></a></li>
+          <li><a href="#sec-15"><span data-t="zh">15. 準據法與爭議解決</span><span data-t="en">15. Governing Law and Disputes</span></a></li>
+          <li><a href="#sec-16"><span data-t="zh">16. 可分割性與完整合意</span><span data-t="en">16. Severability and Entire Agreement</span></a></li>
+          <li><a href="#sec-17"><span data-t="zh">17. 權利讓與</span><span data-t="en">17. Assignment</span></a></li>
+          <li><a href="#sec-18"><span data-t="zh">18. 準據語言聲明</span><span data-t="en">18. Controlling Language</span></a></li>
+          <li><a href="#sec-19"><span data-t="zh">19. 聯絡方式</span><span data-t="en">19. Contact</span></a></li>
+      </ol>
+    </nav>
+
+      <section id="sec-1">
+        <h2><span data-t="zh">1. 接受條款與資格</span><span data-t="en">1. Acceptance and Eligibility</span></h2>
+        <div data-t="zh">
+      <p>本使用條款（下稱「本條款」）為您與 GoManga 團隊（下稱「本團隊」、「我們」）之間就 GoManga 應用程式與相關網站之使用所訂立的具法律拘束力之協議。本團隊為一個獨立的小型團隊／個人開發者，並非註冊公司。</p>
+      <p>下載、安裝、存取或使用 GoManga 應用程式或網站，即表示您已閱讀、瞭解並同意接受本條款之拘束。若您不同意本條款，請勿安裝或使用本服務。</p>
+      <p>您聲明並保證您具有完全行為能力以締結本條款。若您未達您居住地之法定成年年齡，您須在其法定監護人之同意與監督下，方得使用本服務。您並聲明，在您居住地，您使用本服務及您所設定之來源並未受到法律禁止。</p>
+        </div>
+        <div data-t="en">
+      <p>These Terms of Use (the "Terms") form a legally binding agreement between you and the GoManga Team (the "Team," "we," or "us") governing your use of the GoManga application and its related website. The Team is a small independent team / individual developer and is not a registered company.</p>
+      <p>By downloading, installing, accessing, or using the GoManga application or website, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, do not install or use the service.</p>
+      <p>You represent and warrant that you have full legal capacity to enter into these Terms. If you are below the age of legal majority in your place of residence, you may use the service only with the consent and supervision of your legal guardian. You further represent that your use of the service and of any source you configure is not prohibited by law in your place of residence.</p>
+        </div>
+      </section>
+
+      <section id="sec-2">
+        <h2><span data-t="zh">2. 定義</span><span data-t="en">2. Definitions</span></h2>
+        <div data-t="zh">
+      <p>為本條款之目的，下列詞語具有以下涵義：</p>
       <ul>
-        <li>你需遵守所在地法律、來源網站條款與內容權利人的要求。</li>
-        <li>你不得使用 GoManga 侵害他人著作權、商標權、隱私權或其他權利。</li>
-        <li>你不得把 GoManga 或相關支援入口用於散佈侵權內容、繞過付費牆、共享憑證或公開敏感資料。</li>
-        <li>你不得提交包含密碼、私密 token、完整 cookie、付費內容或他人個資的公開問題回報。</li>
-        <li>你需自行備份重要設定與資料；app 更新、系統問題、裝置異常或第三方來源變動可能造成資料遺失或內容不可用。</li>
+        <li>「App」（應用程式）：指 GoManga iOS 應用程式，包含其所有版本、更新與元件。</li>
+        <li>「Site」（網站）：指託管於 <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a> 的 GoManga 網站，以及相關之公開專案頁面。</li>
+        <li>「Sources」（來源）：指由您新增、安裝或啟用的第三方擴充功能、遠端服務，或位於您自有裝置或網路上的本機服務，App 透過這些來源瀏覽、搜尋、開啟並閱讀內容。</li>
+        <li>「Repositories」（儲存庫）：指由您新增之來源清單或來源套件之集合，您可由其中安裝或啟用個別來源。</li>
+        <li>「Content」（內容）：指可透過您所設定之來源取得或顯示的漫畫、圖像、文字、檔案、封面、章節、中繼資料及其他素材。本團隊並不擁有、託管或控制此類內容。</li>
+        <li>「Submissions」（提交內容）：指您主動向本團隊或透過公開管道提交的任何資料，包括問題回報、截圖、診斷片段、意見回饋或其他訊息。</li>
       </ul>
-    </section>
+        </div>
+        <div data-t="en">
+      <p>For the purposes of these Terms, the following terms have the meanings set out below:</p>
+      <ul>
+        <li>"App" means the GoManga iOS application, including all of its versions, updates, and components.</li>
+        <li>"Site" means the GoManga website hosted at <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a> and related public project pages.</li>
+        <li>"Sources" means the third-party extensions, remote services, or local services on your own device or network that you add, install, or enable, and through which the App browses, searches, opens, and reads content.</li>
+        <li>"Repositories" means the lists or bundles of sources that you add and from which you may install or enable individual sources.</li>
+        <li>"Content" means the manga, images, text, files, covers, chapters, metadata, and other materials that may be retrieved or displayed through the sources you configure. The Team does not own, host, or control such content.</li>
+        <li>"Submissions" means any material you actively send to the Team or through a public channel, including issue reports, screenshots, diagnostic snippets, feedback, or other communications.</li>
+      </ul>
+        </div>
+      </section>
 
-    <section>
-      <h2>第三方來源與服務</h2>
-      <p>GoManga 可連線到你設定的來源或來源服務。這些第三方服務不受 GoManga Team 控制。它們的可用性、內容、速度、登入、驗證、cookie、政策或法律合規性均由該服務與使用者自行負責。</p>
-      <p>GoManga Team 不保證任何特定來源、host、檔案格式、登入方式或驗證流程可持續使用。</p>
-    </section>
+      <section id="sec-3">
+        <h2><span data-t="zh">3. GoManga 是什麼、不是什麼</span><span data-t="en">3. What GoManga Is and Is Not</span></h2>
+        <div data-t="zh">
+      <p>GoManga 是一款本機優先的漫畫閱讀器，並結合一套來源設定框架。App 本身的功能在於：讓您新增儲存庫、安裝並啟用來源，並就您所設定的那些來源進行瀏覽、搜尋、開啟與閱讀。</p>
+      <p>GoManga 並不執行以下事項：不託管、不上傳、不儲存、不販售、不散布、亦不索引任何漫畫內容；不隨附任何官方內容目錄；不提供任何來源推薦，亦不隨附任何經整理或策劃之來源清單。本 App 所提供之授權僅及於 App 軟體本身；本團隊不就任何內容、來源或第三方素材，授予您任何權利、所有權、授權或許可，亦不賦予您存取任何您本不得獨立且合法存取之內容的權限。</p>
+      <p>本 App 所內建之「本機來源」（Local source）僅為一項內容中立之機制，供您匯入或閱讀您於自有裝置或網路上已自行控制之檔案；該機制不隨附任何內容、不索引任何內容，並非由本團隊提供之內容來源，亦非任何形式之來源推薦。</p>
+      <p>所有來源、檔案、帳號、憑證及存取權限，皆由您自行設定並控制。App 僅在您主動設定來源後，方會依您之指示連線至該等來源以取得內容。本團隊對於任何來源或其內容之存在、可用性、合法性、正確性或安全性，不作任何形式之背書、保證或控制。</p>
+        </div>
+        <div data-t="en">
+      <p>GoManga is a local-first manga reader combined with a source-configuration framework. The App's function is to let you add repositories, install and enable sources, and then browse, search, open, and read from the sources you have configured.</p>
+      <p>GoManga does NOT do any of the following: it does not host, upload, store, sell, distribute, or index any manga content; it ships no official content catalog; it makes no source recommendations and ships no curated or organized source list. The licence provided in the App covers only the App software itself; the Team grants you no right, title, licence, or permission of any kind in or to any content, source, or third-party material, and confers no authority to access any content you are not independently and lawfully entitled to access.</p>
+      <p>The "Local source" built into the App is a content-neutral mechanism only, for you to import or read files you already control on your own device or network. It ships with no content, indexes nothing, is not a content source provided by the Team, and is not a source recommendation of any kind.</p>
+      <p>All sources, files, accounts, credentials, and access rights are configured and controlled by you. The App connects to a source to retrieve content only after you have actively configured that source, and only as you direct it to. The Team does not endorse, warrant, or control the existence, availability, legality, accuracy, or security of any source or its content.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>問題回報與貢獻</h2>
-      <p>你提交的 issue、截圖、診斷片段、建議或其他回饋，可能會用於重現、修復、測試與改善 GoManga。請只提交你有權分享的資料。</p>
-      <p>公開 issue 可能被搜尋引擎或其他使用者讀取。若內容含敏感資料，請不要公開提交。</p>
-    </section>
+      <section id="sec-4">
+        <h2><span data-t="zh">4. 使用授權與 Apple 相關條款</span><span data-t="en">4. Licence to Use and Apple-Required Terms</span></h2>
+        <div data-t="zh">
+      <p>在您遵守本條款（特別是第 5 條可接受使用）之前提下，本團隊授予您一項有限的、個人的、非專屬的、不可轉讓的、不可再授權的、且可撤銷的授權，僅供您在您所擁有或控制之裝置上，為個人非商業且合法之目的安裝並使用本 App。</p>
+      <p>為免疑義，本授權僅及於 App 軟體本身。本授權不就任何內容、來源或第三方素材授予您任何權利、所有權、授權或許可，亦不賦予您存取任何您本不得獨立且合法存取之內容的權限。您對本 App 之一切使用，均須符合本條款第 5 條，且須合法為之。</p>
+      <p>本 App 透過 Apple App Store 散布。您對本 App 之使用，並受 Apple《App Store 服務條款》中之《授權應用程式最終使用者授權合約》（標準 EULA）或 Apple 提供之任何替代最終使用者授權合約所拘束。如本條款與 Apple 適用之 EULA 有所衝突，就 Apple EULA 所規範之事項，以該 EULA 為準。</p>
+      <p>關於 Apple 之 Apple-Required Terms，雙方確認下列事項：（a）本條款僅存在於您與本團隊之間，而非與 Apple 之間，且就本 App 及其內容應負責者為本團隊，而非 Apple；（b）Apple 並無就本 App 提供任何維護及支援服務之義務，相關維護與支援概由本團隊單獨負責；（c）於適用範圍內，若本 App 未能符合任何適用之保證，您得通知 Apple，Apple 將就該 App 退還您所支付之購買價金（如有），且在適用法律允許之最大範圍內，Apple 就該 App 不負任何其他保證義務；（d）對於任何因本 App 引起之請求，包括產品責任、本 App 未能符合任何適用法律或法規要求，以及依消費者保護或類似法律所生之請求，應負責者為本團隊（而非 Apple）；（e）對於任何第三方主張本 App 或您對本 App 之持有與使用侵害其智慧財產權之請求，其調查、抗辯、和解與了結概由本團隊（而非 Apple）負責。</p>
+      <p>雙方確認，Apple 及 Apple 之子公司為本條款之第三方受益人，且於您接受本條款時，Apple 即有權（並視為已接受該等執行權利）以第三方受益人之身分對您執行本條款。</p>
+      <p>出口管制與制裁遵循：您聲明並保證，您並非位於任何受美國政府禁運或被指定為「支持恐怖主義」之國家／地區，且未列名於任何美國政府之禁止或受限當事人名單。您並同意，於使用本 App 時遵守所有適用之出口管制及制裁法律。</p>
+      <p>未經本團隊事前書面同意，您不得轉售、轉租、出借、再授權、散布本 App，或將其用於商業目的，亦不得移除或變更任何專屬權利聲明。本授權項下未明文授予之一切權利，均由本團隊及其授權人保留。</p>
+        </div>
+        <div data-t="en">
+      <p>Subject to your compliance with these Terms (and in particular the acceptable use rules in Section 5), the Team grants you a limited, personal, non-exclusive, non-transferable, non-sublicensable, and revocable licence to install and use the App on a device you own or control, solely for your personal, non-commercial, and lawful use.</p>
+      <p>For the avoidance of doubt, this licence covers only the App software itself. It grants you no right, title, licence, or permission of any kind in or to any content, source, or third-party material, and confers no authority to access any content you are not independently and lawfully entitled to access. All of your use of the App must comply with Section 5 of these Terms and must be lawful.</p>
+      <p>The App is distributed through the Apple App Store. Your use of the App is also subject to the Licensed Application End User Licence Agreement (the standard EULA) within Apple's App Store Terms of Service, or any alternative end-user licence agreement provided by Apple. To the extent these Terms conflict with the applicable Apple EULA on matters that EULA governs, the Apple EULA controls for those matters.</p>
+      <p>With respect to Apple, the parties acknowledge that: (a) these Terms are concluded between you and the Team only, and not with Apple, and the Team (not Apple) is responsible for the App and its content; (b) Apple has no obligation to furnish any maintenance and support services with respect to the App, and the Team is solely responsible for any such maintenance and support; (c) to the extent applicable, in the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the App to you, and, to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App; (d) the Team, not Apple, is responsible for addressing any claims relating to the App, including product liability claims, any claim that the App fails to conform to any applicable legal or regulatory requirement, and claims arising under consumer-protection or similar law; and (e) the Team, not Apple, is responsible for the investigation, defense, settlement, and discharge of any third-party claim that the App or your possession and use of it infringes that third party's intellectual property rights.</p>
+      <p>The parties acknowledge that Apple, and Apple's subsidiaries, are third-party beneficiaries of these Terms, and that upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
+      <p>Export control and sanctions compliance: You represent and warrant that you are not located in any country that is subject to a U.S. Government embargo or that has been designated by the U.S. Government as "terrorist-supporting," and that you are not listed on any U.S. Government list of prohibited or restricted parties. You further agree to comply with all applicable export-control and sanctions laws in using the App.</p>
+      <p>You may not resell, sublease, lend, sublicense, or distribute the App, use it for commercial purposes, or remove or alter any proprietary notices, without the Team's prior written consent. All rights not expressly granted under this licence are reserved to the Team and its licensors.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>免責聲明</h2>
-      <p>GoManga 依「現狀」提供，不保證不間斷、無錯誤、符合特定用途，或能連線到任何特定來源。GoManga Team 不對第三方內容、第三方服務、使用者設定來源或因使用 app 造成的間接損失負責。</p>
-    </section>
+      <section id="sec-5">
+        <h2><span data-t="zh">5. 您的責任與可接受使用</span><span data-t="en">5. Your Responsibilities and Acceptable Use</span></h2>
+        <div data-t="zh">
+      <p>您須對您使用本服務之方式，以及您所設定、安裝、啟用或存取之任何儲存庫、來源與內容，負完全責任。您同意僅以合法且符合本條款之方式使用本服務。</p>
+      <ul>
+        <li>您應遵守所有適用法律，並遵守您所設定之每一來源及服務自身之條款與政策。</li>
+        <li>您聲明並保證，對於您所設定、存取或開啟之任何來源與內容，您具有合法之權利或授權。</li>
+        <li>您不得利用本服務存取、儲存或閱讀您不具合法存取權利之內容，包括未經權利人授權而被提供之內容；您須自行負責於每一來源及每一項內容上查證並確認您之權利，並就此承擔一切責任。</li>
+        <li>您不得利用本服務侵害任何人之智慧財產權、隱私權或其他權利。</li>
+        <li>您不得利用本服務規避或破解任何付費牆、登入機制、地區限制、數位版權管理或其他存取控制措施。</li>
+        <li>您不得分享、轉售或不當提供帳號憑證、權杖或存取權限。</li>
+        <li>您不得在任何公開回報或診斷資料中張貼密碼、私密權杖、完整 Cookie、付費內容、個人資料或其他機密資訊。</li>
+        <li>您不得利用本服務從事任何不法、詐欺、侵權或具危害性之行為，亦不得干擾或破壞本服務或任何來源之正常運作。</li>
+      </ul>
+      <p>您瞭解，透過您所設定之來源所存取之內容，可能包含成人或受年齡限制之素材。您須自行負責確保該等內容對您之年齡及您所在法域而言屬適當且合法；若使用者為未成年人，其法定監護人應負責監督該未成年人之使用及其所設定之來源。</p>
+        </div>
+        <div data-t="en">
+      <p>You are solely responsible for how you use the service and for any repositories, sources, and content you configure, install, enable, or access. You agree to use the service only in a lawful manner and in accordance with these Terms.</p>
+      <ul>
+        <li>You must comply with all applicable laws and with the terms and policies of each source and service you configure.</li>
+        <li>You represent and warrant that you have the lawful right or authorization to access, configure, or open any source and content you use.</li>
+        <li>You must not use the service to access, store, or read content that you do not have a lawful right to access, including content made available without the rights holder's authorization; you are responsible for verifying and confirming your rights in each source and in each item of content, and you assume all liability for doing so.</li>
+        <li>You must not use the service to infringe the intellectual property, privacy, or other rights of any person.</li>
+        <li>You must not use the service to bypass or circumvent any paywall, login mechanism, region lock, digital rights management, or other access control.</li>
+        <li>You must not share, resell, or improperly make available account credentials, tokens, or access rights.</li>
+        <li>You must not post passwords, private tokens, full cookies, paid content, personal data, or other secrets in any public report or diagnostic material.</li>
+        <li>You must not use the service for any unlawful, fraudulent, infringing, or harmful purpose, or to interfere with or disrupt the service or any source.</li>
+      </ul>
+      <p>You understand that content accessed through the sources you configure may include mature or age-restricted material. You are responsible for ensuring that such content is appropriate and lawful for your age and your jurisdiction; where the user is a minor, their legal guardian is responsible for supervising that minor's use and the sources they configure.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>條款變更</h2>
-      <p>我們可能因 app、網站、支援流程或法律需求更新本條款。更新後會調整本頁的最後更新日期。</p>
-    </section>
+      <section id="sec-6">
+        <h2><span data-t="zh">6. 第三方來源與服務</span><span data-t="en">6. Third-Party Sources and Services</span></h2>
+        <div data-t="zh">
+      <p>您所設定之來源、來源服務及本機服務，係由第三方或您自行提供與營運，並不在本團隊之控制範圍內。該等來源與服務適用其各自之條款與隱私政策，您應自行查閱並遵守。</p>
+      <p>本團隊對任何來源或服務之可用性、內容、品質、合法性、正確性、安全性或持續運作，不作任何背書、保證或承諾。任何來源、主機、檔案格式、登入機制或服務隨時可能變更、失效或無法使用，本團隊對此不負任何責任。</p>
+      <p>您瞭解並同意，您使用任何第三方或自架來源及服務之風險，由您自行承擔。本團隊對因該等來源或服務、或其內容所生之任何損害、損失或爭議，不負任何責任。</p>
+        </div>
+        <div data-t="en">
+      <p>The sources, source services, and local services you configure are provided and operated by third parties or by you, and are outside the Team's control. Such sources and services are subject to their own terms and privacy policies, which you should review and comply with.</p>
+      <p>The Team makes no endorsement, warranty, or representation as to the availability, content, quality, legality, accuracy, security, or continued operation of any source or service. Any source, host, file format, login mechanism, or service may change, break, or become unavailable at any time, and the Team is not responsible for this.</p>
+      <p>You understand and agree that you use any third-party or self-hosted source and service at your own risk. The Team is not liable for any damage, loss, or dispute arising from such sources or services or their content.</p>
+        </div>
+      </section>
 
-    <section>
-      <h2>聯絡方式</h2>
-      <p>如需回報問題或提出條款相關疑問，請使用 <a href="support.html">GoManga 問題回報</a>。</p>
-    </section>
+      <section id="sec-7">
+        <h2><span data-t="zh">7. 您的提交內容</span><span data-t="en">7. Your Submissions</span></h2>
+        <div data-t="zh">
+      <p>若您向本團隊提交問題回報、診斷資料、截圖、意見回饋或其他內容，您即就該提交內容授予本團隊一項全球性、非專屬、免權利金、可再授權之授權，使本團隊得為重現、診斷、修正、維護及改善本服務之目的，而使用、重製、儲存、改作及處理該提交內容。</p>
+      <p>您聲明並保證，您有權分享您所提交之內容，且該提交內容不含您無權揭露之機密資訊、密碼、私密權杖、完整 Cookie、付費內容、個人資料或其他他人之機密。</p>
+      <p>問題回報係透過 GitHub Issues（<a href="https://github.com/go-manga/GoMangaApp/issues）進行。請注意：公開提交之內容對他人可見，並可能被搜尋引擎索引。請勿在公開提交中包含任何您不希望被公開之資訊。" rel="noopener">https://github.com/go-manga/GoMangaApp/issues）進行。請注意：公開提交之內容對他人可見，並可能被搜尋引擎索引。請勿在公開提交中包含任何您不希望被公開之資訊。</a></p>
+        </div>
+        <div data-t="en">
+      <p>If you submit issue reports, diagnostic material, screenshots, feedback, or other content to the Team, you grant the Team a worldwide, non-exclusive, royalty-free, sublicensable licence to use, reproduce, store, adapt, and process that submission for the purpose of reproducing, diagnosing, fixing, maintaining, and improving the service.</p>
+      <p>You represent and warrant that you have the right to share what you submit, and that your submission does not contain confidential information you are not permitted to disclose, including passwords, private tokens, full cookies, paid content, personal data, or other secrets belonging to others.</p>
+      <p>Issue reports are handled through GitHub Issues (<a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a>). Please note that public submissions are visible to others and may be indexed by search engines. Do not include in a public submission any information you do not wish to be made public.</p>
+        </div>
+      </section>
+
+      <section id="sec-8">
+        <h2><span data-t="zh">8. 智慧財產權</span><span data-t="en">8. Intellectual Property</span></h2>
+        <div data-t="zh">
+      <p>「GoManga」名稱、標誌、商標、App、網站及其所有相關之軟體、設計與素材，均屬本團隊或其授權人所有，並受智慧財產權法律保護。除本條款明文授予之有限授權外，本條款並未將任何該等權利移轉或授予予您。</p>
+      <p>未經本團隊事前書面同意，您不得使用「GoManga」名稱或標誌，亦不得以可能造成混淆或暗示有關聯或經背書之方式使用之。</p>
+      <p>透過來源取得之一切內容及第三方素材，其權利均屬其各自之權利人所有。您應尊重該等第三方之權利，並僅在您依法享有權利之範圍內使用該等內容。</p>
+      <p>本 App 包含若干以開放原始碼授權條款釋出之第三方元件；相關著作權聲明、授權全文及（如適用）對應原始碼之取得方式，列示於 App 內「設定 &gt; 授權／致謝」畫面。</p>
+        </div>
+        <div data-t="en">
+      <p>The "GoManga" name, logos, trademarks, App, Site, and all related software, designs, and materials are owned by the Team or its licensors and are protected by intellectual property laws. Except for the limited licence expressly granted in these Terms, no such rights are transferred or granted to you.</p>
+      <p>You may not use the "GoManga" name or logos without the Team's prior written consent, or in any way likely to cause confusion or to suggest affiliation or endorsement.</p>
+      <p>All content obtained through sources and all third-party materials remain the property of their respective rights holders. You must respect those third-party rights and use such content only to the extent you are legally entitled to do so.</p>
+      <p>The App includes certain third-party components released under open-source licences; the applicable copyright notices, full licence texts, and (where applicable) how to obtain the corresponding source are listed in the in-app &ldquo;Settings &gt; Licenses / Acknowledgements&rdquo; screen.</p>
+        </div>
+      </section>
+
+      <section id="sec-9">
+        <h2><span data-t="zh">9. 著作權、通知移除與反誘導政策</span><span data-t="en">9. Copyright, Takedown, and No-Inducement Policy</span></h2>
+        <div data-t="zh">
+      <p>本團隊不招攬、不鼓勵、亦不誘導任何侵權行為，亦不會在明知之情形下協助侵權。由於本團隊並不託管、儲存或散布任何漫畫內容，任何關於透過來源取得之內容的著作權或其他權利申訴，原則上應向提供或託管該內容之來源或主機提出，因為唯有該方有能力移除或處理該內容。</p>
+      <p>對於本團隊實際控制之素材——亦即網站、問題追蹤系統及任何由本團隊發布之素材——本團隊提供一個善意之通知管道。若您善意認為該等素材侵害您之權利，您可透過 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> 與我們聯繫。經收到可信之通知後，本團隊將就本團隊所控制之介面（包括網站、問題追蹤系統及任何由本團隊發布之素材），採取合理措施，包括於適當情形下停用或移除相關素材。</p>
+      <p>您之通知應提供合理且充分之資訊，使我們得以辨識並評估該申訴，包括：受指控素材之識別與所在位置、您之聯絡方式、您權利之說明，以及您善意相信該使用未經授權之聲明。本團隊將於合理時間內善意審酌經適當通知之申訴。</p>
+      <p>反覆侵權與濫用：本團隊保留在適當情形下，於適用法律允許之範圍內，終止利用本 App 從事侵權之使用者其存取權限之權利。</p>
+        </div>
+        <div data-t="en">
+      <p>The Team does not solicit, encourage, or induce infringement, and will not knowingly facilitate it. Because the Team does not host, store, or distribute any manga content, any copyright or other rights complaint about content obtained through a source should, as a rule, be directed to the source or host that provides or hosts that content, as only that party is able to remove or address it.</p>
+      <p>For material the Team actually controls — that is, material on the Site, in the issue tracker, and any material the Team publishes — the Team provides a good-faith notice channel. If you believe in good faith that such material infringes your rights, you may contact us at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>. On credible notice, the Team will take reasonable action with respect to the surfaces it controls (including the Site, the issue tracker, and any Team-published material), including disabling or removing the material where appropriate.</p>
+      <p>Your notice should provide reasonable and sufficient information to enable us to identify and evaluate the complaint, including: identification and location of the allegedly infringing material, your contact details, a description of your rights, and a statement of your good-faith belief that the use is unauthorized. The Team will review properly submitted complaints in good faith within a reasonable time.</p>
+      <p>Repeat infringers and abuse: The Team reserves the right, in appropriate circumstances and to the extent permitted by applicable law, to terminate the access of users who use the App to infringe.</p>
+        </div>
+      </section>
+
+      <section id="sec-10">
+        <h2><span data-t="zh">10. 免責聲明</span><span data-t="en">10. Disclaimers</span></h2>
+        <div data-t="zh">
+      <p>在適用法律允許之最大範圍內，本服務係以「現狀」及「現有可用」之基礎提供，本團隊不作任何明示、默示或法定之任何形式的陳述或保證。</p>
+      <p>在適用法律允許之最大範圍內，本團隊明確否認所有默示保證，包括「適售性、特定目的之適用性、所有權及不侵權」之默示保證。本團隊不保證本服務將不中斷、及時、安全或無錯誤，亦不保證任何瑕疵將被修正。</p>
+      <p>本團隊就任何來源、主機、檔案格式、登入機制或服務之持續運作或可用性，不作任何保證。任何透過第三方或自架來源所取得之內容，其取得均由您自行斟酌並自負風險。本條包含之免責聲明不影響適用法律所賦予且不得排除之任何強制性保證或權利；亦不排除或限制因死亡或人身傷害、詐欺或不實陳述、重大過失或故意，以及依法不得排除之任何其他責任。</p>
+        </div>
+        <div data-t="en">
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.</p>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE TEAM EXPRESSLY DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. The Team does not warrant that the service will be uninterrupted, timely, secure, or error-free, or that any defects will be corrected.</p>
+      <p>The Team makes no guarantee as to the continued operation or availability of any source, host, file format, login mechanism, or service. Any content obtained through a third-party or self-hosted source is obtained at your own discretion and risk. Nothing in these disclaimers affects any mandatory warranties or rights granted by applicable law that cannot be excluded, and nothing excludes or limits liability for death or personal injury, fraud or fraudulent misrepresentation, gross negligence or willful misconduct, or any other liability that cannot be excluded under applicable law.</p>
+        </div>
+      </section>
+
+      <section id="sec-11">
+        <h2><span data-t="zh">11. 責任限制</span><span data-t="en">11. Limitation of Liability</span></h2>
+        <div data-t="zh">
+      <p>本條之所有排除與限制，均受本條最後一段所載強制性責任之保留事項所拘束；本條中之任何約定，均不排除或限制因下列事由所生之責任：（a）因本團隊之過失所致之死亡或人身傷害；（b）詐欺或不實陳述；（c）重大過失或故意；或（d）依適用法律不得排除或限制之任何其他責任。</p>
+      <p>在適用法律允許之最大範圍內，且受上開保留事項拘束，本團隊對於因您使用或無法使用本服務、或與您所設定之任何來源或內容相關，所生之任何間接、附帶、衍生、特別、懲罰性或加重之損害，包括利潤、資料、商譽或使用權益之損失，概不負責，不論該等損害係基於何種法律理論，亦不論本團隊是否已被告知該等損害發生之可能性。</p>
+      <p>在適用法律允許之最大範圍內，且受上開保留事項拘束，本團隊對所有與本服務相關之請求所負之總責任，於任何情形下不超過下列二者中之較高者：（a）您於導致該請求之事件發生前十二（12）個月內，就本 App 實際支付予本團隊之金額；或（b）於法律允許之情形下，十（10）美元或其等值貨幣。鑑於本 App 為免費提供，對於未向本團隊支付任何金額之使用者，前述（a）款金額為零。</p>
+      <p>部分法域不允許排除或限制特定損害，或不允許排除某些強制性消費者權利。於該等情形下，上述排除與限制僅在該適用法律所允許之最大範圍內適用，且本條不影響您依您居住地強制性消費者保護法所享有且不得排除之權利。</p>
+        </div>
+        <div data-t="en">
+      <p>All exclusions and limitations in this section are subject to the mandatory-liability reservation set out in the final paragraph of this section. Nothing in these Terms excludes or limits the Team's liability for: (a) death or personal injury caused by its negligence; (b) fraud or fraudulent misrepresentation; (c) gross negligence or willful misconduct; or (d) any other liability that cannot be excluded or limited under applicable law.</p>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AND SUBJECT TO THE RESERVATION ABOVE, THE TEAM SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING LOSS OF PROFITS, DATA, GOODWILL, OR USE, arising out of or relating to your use of or inability to use the service or to any source or content you configure, regardless of the legal theory and whether or not the Team has been advised of the possibility of such damages.</p>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AND SUBJECT TO THE RESERVATION ABOVE, THE TEAM'S TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS RELATING TO THE SERVICE SHALL NOT IN ANY EVENT EXCEED THE GREATER OF: (a) THE AMOUNT YOU ACTUALLY PAID THE TEAM FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM; OR (b) WHERE PERMITTED, TEN (10) US DOLLARS (US$10) OR ITS EQUIVALENT. Because the App is provided free of charge, the amount in (a) is zero for users who have paid the Team nothing.</p>
+      <p>Some jurisdictions do not allow the exclusion or limitation of certain damages or the exclusion of certain mandatory consumer rights. In those cases, the above exclusions and limitations apply only to the maximum extent permitted by that applicable law, and nothing in this section affects rights you have under the mandatory consumer-protection law of your place of residence that cannot be excluded.</p>
+        </div>
+      </section>
+
+      <section id="sec-12">
+        <h2><span data-t="zh">12. 補償</span><span data-t="en">12. Indemnification</span></h2>
+        <div data-t="zh">
+      <p>在適用法律允許之範圍內，您同意就因下列事由所引起或與之相關之任何第三方請求、責任、損害、損失與費用（包括合理之律師費），對本團隊及其開發者、貢獻者與代表予以補償、辯護並使其免受損害：</p>
+      <ul>
+        <li>您對本服務之使用或濫用；</li>
+        <li>您違反本條款或任何適用法律；</li>
+        <li>您對任何來源、服務或內容之設定、存取或使用，包括任何未經授權或不法之存取；</li>
+        <li>您侵害任何第三方之智慧財產權、隱私權或其他權利；或</li>
+        <li>您之任何提交內容。</li>
+      </ul>
+      <p>本團隊保留就任何應由您補償之事項，自行進行排他性辯護與控制之權利，而您同意於此情形下與本團隊合作。</p>
+        </div>
+        <div data-t="en">
+      <p>To the extent permitted by applicable law, you agree to indemnify, defend, and hold harmless the Team and its developers, contributors, and representatives from and against any third-party claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or relating to:</p>
+      <ul>
+        <li>your use or misuse of the service;</li>
+        <li>your breach of these Terms or of any applicable law;</li>
+        <li>your configuration, access, or use of any source, service, or content, including any unauthorized or unlawful access;</li>
+        <li>your infringement of the intellectual property, privacy, or other rights of any third party; or</li>
+        <li>any of your Submissions.</li>
+      </ul>
+      <p>The Team reserves the right to assume the exclusive defense and control of any matter subject to indemnification by you, and you agree to cooperate with the Team in that event.</p>
+        </div>
+      </section>
+
+      <section id="sec-13">
+        <h2><span data-t="zh">13. 期間、終止與暫停</span><span data-t="en">13. Term, Termination, and Suspension</span></h2>
+        <div data-t="zh">
+      <p>本條款自您首次存取或使用本服務時生效，並於您持續使用本服務期間持續有效。</p>
+      <p>您可隨時停止使用本服務並移除本 App，以終止本條款。在適用法律允許之範圍內，若您違反本條款，或為保護本服務、本團隊或他人，本團隊得隨時、無須事先通知，暫停或終止您使用本服務之權利。</p>
+      <p>終止後，本條款中依其性質應於終止後繼續有效之條款——包括但不限於智慧財產權、免責聲明、責任限制、補償、準據法及解釋條款——仍持續有效。終止並不影響您裝置上之本機資料；該等資料之去留由您自行控制。</p>
+        </div>
+        <div data-t="en">
+      <p>These Terms take effect when you first access or use the service and continue while you use it.</p>
+      <p>You may terminate these Terms at any time by ceasing to use the service and removing the App. To the extent permitted by applicable law, the Team may suspend or terminate your right to use the service at any time, without prior notice, if you breach these Terms or to protect the service, the Team, or others.</p>
+      <p>On termination, provisions that by their nature should survive — including, without limitation, intellectual property, disclaimers, limitation of liability, indemnification, governing law, and interpretation — continue in effect. Termination does not affect local data on your device; whether that data remains is within your control.</p>
+        </div>
+      </section>
+
+      <section id="sec-14">
+        <h2><span data-t="zh">14. 條款之變更</span><span data-t="en">14. Changes to the Terms</span></h2>
+        <div data-t="zh">
+      <p>本團隊得不時更新或修改本條款，以反映本服務之變更、法律要求或營運考量。修訂後之版本將連同其生效日期一併公布。</p>
+      <p>若屬重大變更，本團隊將採取合理方式提供通知，例如於網站或 App 內公告。於變更生效後，您繼續使用本服務，即視為您接受修訂後之條款。若您不同意修訂後之條款，請停止使用本服務。</p>
+        </div>
+        <div data-t="en">
+      <p>The Team may update or modify these Terms from time to time to reflect changes to the service, legal requirements, or operational considerations. The revised version will be posted together with its effective date.</p>
+      <p>For material changes, the Team will provide notice by reasonable means, such as a notice on the Site or within the App. Your continued use of the service after the changes take effect constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, stop using the service.</p>
+        </div>
+      </section>
+
+      <section id="sec-15">
+        <h2><span data-t="zh">15. 準據法與爭議解決</span><span data-t="en">15. Governing Law and Disputes</span></h2>
+        <div data-t="zh">
+      <p>本團隊希望以友好方式解決爭議。若您就本服務或本條款有任何疑慮，請先透過 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> 與我們聯繫，雙方應本於善意，於合理期間內先以非正式方式尋求解決，再採取任何正式程序。</p>
+      <p>本條款不指定任何特定國家、州別之準據法或法院。在法律允許之範圍內，雙方間之關係依一般、廣泛可執行之法律原則處理。然而，本條款中之任何約定，均不剝奪您依您居住地強制性消費者保護法所享有之保障；該等強制性法律於其適用範圍內優先適用，並賦予您於該地提起程序之權利。</p>
+      <p>在適用法律允許之範圍內，任何請求均應以您個人之身分提出，而非以集體訴訟或代表訴訟之一造身分提出。</p>
+        </div>
+        <div data-t="en">
+      <p>The Team prefers to resolve disputes amicably. If you have any concern about the service or these Terms, please first contact us at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>, and the parties shall, in good faith, seek an informal resolution within a reasonable period before pursuing any formal process.</p>
+      <p>These Terms do not designate the governing law or courts of any specific country or state. To the extent permitted by law, the relationship between the parties is governed by general, broadly enforceable legal principles. However, nothing in these Terms deprives you of the protections of the mandatory consumer-protection law of your place of residence; such mandatory law prevails to the extent it applies and entitles you to bring proceedings there.</p>
+      <p>To the extent permitted by applicable law, any claim shall be brought in your individual capacity, and not as a plaintiff or class member in any class or representative action.</p>
+        </div>
+      </section>
+
+      <section id="sec-16">
+        <h2><span data-t="zh">16. 可分割性與完整合意</span><span data-t="en">16. Severability and Entire Agreement</span></h2>
+        <div data-t="zh">
+      <p>若本條款之任何條文經認定為無效、不法或不可執行，該條文應於必要之最小範圍內被限縮或剔除，而其餘條文仍應完全有效並具拘束力。</p>
+      <p>本條款連同 Apple 適用之 EULA 及 GoManga 隱私政策，構成您與本團隊間就本服務之完整合意，並取代雙方先前就同一標的之一切口頭或書面溝通與協議。本團隊未行使或執行本條款之任何權利或規定，不構成對該權利或規定之拋棄。</p>
+        </div>
+        <div data-t="en">
+      <p>If any provision of these Terms is held invalid, unlawful, or unenforceable, that provision shall be limited or removed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+      <p>These Terms, together with the applicable Apple EULA and the GoManga Privacy Policy, constitute the entire agreement between you and the Team regarding the service and supersede all prior oral or written communications and agreements on the same subject. The Team's failure to exercise or enforce any right or provision of these Terms does not constitute a waiver of that right or provision.</p>
+        </div>
+      </section>
+
+      <section id="sec-17">
+        <h2><span data-t="zh">17. 權利讓與</span><span data-t="en">17. Assignment</span></h2>
+        <div data-t="zh">
+      <p>未經本團隊事前書面同意，您不得轉讓或移轉本條款項下之任何權利或義務。任何違反本規定之轉讓均屬無效。</p>
+      <p>本團隊得自由將本條款項下之權利與義務轉讓或移轉予任何繼受者或受讓人，包括於合併、收購、重組或全部或部分資產移轉之情形，且無須另行通知。</p>
+        </div>
+        <div data-t="en">
+      <p>You may not assign or transfer any of your rights or obligations under these Terms without the Team's prior written consent. Any assignment in violation of this provision is void.</p>
+      <p>The Team may freely assign or transfer its rights and obligations under these Terms to any successor or assignee, including in connection with a merger, acquisition, reorganization, or transfer of all or part of its assets, without further notice.</p>
+        </div>
+      </section>
+
+      <section id="sec-18">
+        <h2><span data-t="zh">18. 準據語言聲明</span><span data-t="en">18. Controlling Language</span></h2>
+        <div data-t="zh">
+      <p>本條款以繁體中文及英文提供。繁體中文版為準據且具權威性之版本；英文版僅為便於理解之翻譯。</p>
+      <p>若繁體中文版與英文版之間有任何分歧、不一致或解釋上之爭議，概以繁體中文版為準。</p>
+      <p>本條款之生效／最後更新日期為 2026 年 6 月 20 日。</p>
+        </div>
+        <div data-t="en">
+      <p>These Terms are provided in Traditional Chinese and English. The Traditional Chinese version is the controlling and authoritative text; the English version is a convenience translation.</p>
+      <p>In the event of any divergence, inconsistency, or dispute over interpretation between the Traditional Chinese and English versions, the Traditional Chinese version prevails.</p>
+      <p>These Terms are effective and were last updated on June 20, 2026.</p>
+        </div>
+      </section>
+
+      <section id="sec-19">
+        <h2><span data-t="zh">19. 聯絡方式</span><span data-t="en">19. Contact</span></h2>
+        <div data-t="zh">
+      <p>如就本條款有任何疑問或請求，請透過 <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a> 與我們聯繫。</p>
+      <ul>
+        <li>問題與錯誤回報：<a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a></li>
+        <li>專案首頁：<a href="https://github.com/go-manga" rel="noopener">https://github.com/go-manga</a></li>
+        <li>網站：<a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a></li>
+      </ul>
+      <p>生效／最後更新日期：2026 年 6 月 20 日。</p>
+        </div>
+        <div data-t="en">
+      <p>For any question or request regarding these Terms, please contact us at <a href="mailto:gomanga.support@gmail.com">gomanga.support@gmail.com</a>.</p>
+      <ul>
+        <li>Issues and bug reports: <a href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener">https://github.com/go-manga/GoMangaApp/issues</a></li>
+        <li>Project home: <a href="https://github.com/go-manga" rel="noopener">https://github.com/go-manga</a></li>
+        <li>Website: <a href="https://go-manga.github.io" rel="noopener">https://go-manga.github.io</a></li>
+      </ul>
+      <p>Effective / last updated: June 20, 2026.</p>
+        </div>
+      </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <a href="privacy.html">隱私政策</a>
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 GoManga Team</span>
+        <span>
+          <a href="privacy.html"><span data-t="zh">隱私權政策</span><span data-t="en">Privacy</span></a> ·
+          <a href="terms.html"><span data-t="zh">使用條款</span><span data-t="en">Terms</span></a> ·
+          <a href="mailto:gomanga.support@gmail.com"><span data-t="zh">聯絡我們</span><span data-t="en">Contact</span></a>
+        </span>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

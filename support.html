@@ -1,177 +1,202 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="回報問題 | GoManga"
+  data-title-en="Report an issue | GoManga"
+  data-desc-zh="回報 GoManga App 的 issue、bug、閱讀器、來源、書庫或設定問題。提供重現步驟與版本，協助我們定位。"
+  data-desc-en="Report a GoManga app issue or bug — reader, sources, library, or settings. Share repro steps and versions so we can locate it.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>回報問題 | GoManga</title>
-  <meta name="description" content="回報 GoManga app 的 issue、bug、閱讀器、來源、書庫或設定問題。">
+  <meta name="description" content="回報 GoManga App 的 issue、bug、閱讀器、來源、書庫或設定問題。提供重現步驟與版本，協助我們定位。">
   <meta property="og:title" content="GoManga 回報問題">
-  <meta property="og:description" content="提供重現步驟、版本與診斷資訊，協助定位 GoManga app 問題。">
-  <meta property="og:image" content="assets/app-icon.png">
+  <meta property="og:image" content="assets/social-go.png">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="support-page">
+<body class="doc-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="GoManga 首頁">
-      <img src="assets/app-icon.png" alt="" width="36" height="36">
-      <span>GoManga</span>
-    </a>
-    <nav class="nav-links" aria-label="主要導覽">
-      <a href="getting-started.html">上手</a>
-      <a href="faq.html">FAQ</a>
-      <a aria-current="page" href="support.html">回報問題</a>
-      <a href="privacy.html">隱私</a>
-      <a href="terms.html">條款</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a aria-current="page" href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="support-hero" aria-labelledby="support-title">
-      <div class="shell support-hero-layout">
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="hero-halftone" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">回報問題</span><span data-t="en">Report an issue</span></p>
+      <h1 class="doc-title"><span data-t="zh">回報 GoManga 問題</span><span data-t="en">Report a GoManga issue</span></h1>
+      <p class="updated">
+        <span data-t="zh">把版本、裝置、發生頁面與重現步驟整理好，再前往 GitHub Issues 開新回報。請移除私密資料後再送出。</span>
+        <span data-t="en">Gather your version, device, the affected area, and steps to reproduce, then open a new report on GitHub Issues. Remove anything private before posting.</span>
+      </p>
+    </div>
+  </section>
+
+  <main class="wrap" style="padding:48px 0 90px">
+    <div class="report-layout">
+      <form class="report-form" data-issue-form>
         <div>
-          <p class="section-kicker">Report issue</p>
-          <h1 id="support-title">回報 GoManga 問題</h1>
-          <p>把版本、裝置、發生頁面與重現步驟整理好，再前往 GitHub Issues 開新回報。請移除私密資料後再送出。</p>
+          <p class="kicker"><span data-t="zh">問題草稿</span><span data-t="en">Issue draft</span></p>
+          <h2 class="section-title" style="font-size:24px"><span data-t="zh">填好欄位，自動產生草稿</span><span data-t="en">Fill the fields, get a ready draft</span></h2>
         </div>
-        <img src="assets/launch-logo.png" alt="GoManga" width="300" height="213">
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="shell issue-layout">
-        <form class="issue-form" data-issue-form>
-          <div class="form-heading">
-            <p class="section-kicker">Issue details</p>
-            <h2>問題草稿</h2>
-          </div>
+        <label class="field">
+          <span><span data-t="zh">標題</span><span data-t="en">Title</span> <span class="req">*</span></span>
+          <input name="title" type="text" required
+            data-ph-zh="例如：閱讀器切到下一章後空白"
+            data-ph-en="e.g. Reader shows a blank page after the next chapter"
+            placeholder="例如：閱讀器切到下一章後空白">
+        </label>
 
-          <label>
-            <span>標題</span>
-            <input name="title" type="text" required placeholder="例如：閱讀器切到下一章後空白">
+        <div class="field-row">
+          <label class="field">
+            <span><span data-t="zh">發生位置</span><span data-t="en">Area</span> <span class="req">*</span></span>
+            <select name="area" required>
+              <option value="Reader" data-t-opt>閱讀器 · Reader</option>
+              <option value="Manga Detail">漫畫詳情 · Manga Detail</option>
+              <option value="Library">書庫 · Library</option>
+              <option value="Lists">清單 · Read-later / History</option>
+              <option value="Sources">來源 · Sources / Repositories</option>
+              <option value="Downloads">下載 · Downloads / Backup</option>
+              <option value="Settings">設定 · Settings</option>
+              <option value="Launch">啟動 · Launch</option>
+              <option value="Other">其他 · Other</option>
+            </select>
           </label>
-
-          <div class="field-row">
-            <label>
-              <span>發生位置</span>
-              <select name="area" required>
-                <option value="Reader">閱讀器</option>
-                <option value="Manga Detail">漫畫詳情</option>
-                <option value="Library">書庫</option>
-                <option value="Lists">稍後閱讀 / 閱讀歷史</option>
-                <option value="Sources">來源 / Repositories</option>
-                <option value="Downloads">下載 / 備份</option>
-                <option value="Settings">設定</option>
-                <option value="Launch">啟動</option>
-                <option value="Other">其他</option>
-              </select>
-            </label>
-
-            <label>
-              <span>影響程度</span>
-              <select name="severity">
-                <option value="Blocks reading">無法閱讀</option>
-                <option value="Major workflow broken">主要流程壞掉</option>
-                <option value="Intermittent">偶發</option>
-                <option value="Cosmetic">畫面或文案</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="field-row">
-            <label>
-              <span>App 版本</span>
-              <input name="appVersion" type="text" placeholder="例如：1.0.0 (42)">
-            </label>
-
-            <label>
-              <span>iOS / iPadOS 版本</span>
-              <input name="osVersion" type="text" placeholder="例如：iOS 18.5">
-            </label>
-          </div>
-
-          <div class="field-row">
-            <label>
-              <span>裝置</span>
-              <input name="device" type="text" placeholder="例如：iPhone 16 Pro">
-            </label>
-
-            <label>
-              <span>來源或 host（選填）</span>
-              <input name="source" type="text" placeholder="只填可公開資訊，避免貼 cookie/token">
-            </label>
-          </div>
-
-          <label>
-            <span>重現步驟</span>
-            <textarea name="steps" required rows="5" placeholder="1. 開啟...
-2. 點選...
-3. 看到..."></textarea>
+          <label class="field">
+            <span><span data-t="zh">影響程度</span><span data-t="en">Severity</span></span>
+            <select name="severity">
+              <option value="Blocks reading">無法閱讀 · Blocks reading</option>
+              <option value="Major workflow broken">主要流程壞掉 · Major workflow broken</option>
+              <option value="Intermittent">偶發 · Intermittent</option>
+              <option value="Cosmetic">畫面或文案 · Cosmetic</option>
+            </select>
           </label>
-
-          <label>
-            <span>預期結果</span>
-            <textarea name="expected" rows="3" placeholder="你原本預期 GoManga 要做什麼？"></textarea>
-          </label>
-
-          <label>
-            <span>實際結果</span>
-            <textarea name="actual" required rows="4" placeholder="實際看到的錯誤、空白、卡住、閃退或錯誤訊息。"></textarea>
-          </label>
-
-          <label>
-            <span>診斷資訊（選填）</span>
-            <textarea name="diagnostics" rows="4" placeholder="可貼錯誤摘要、截圖說明或診斷檔重點。請移除私密資料。"></textarea>
-          </label>
-
-          <label class="checkbox-line">
-            <input name="diagnosticsAvailable" type="checkbox">
-            <span>我可以另外附上 GoManga 診斷日誌或截圖</span>
-          </label>
-
-          <div class="actions">
-            <button class="button primary" type="submit">前往 GitHub Issues</button>
-            <button class="button neutral" type="button" data-copy-template>複製草稿</button>
-            <a class="button neutral" href="https://github.com/go-manga/GoMangaApp/issues">查看既有 issues</a>
-          </div>
-        </form>
-
-        <aside class="side-panel" aria-labelledby="support-notes-title">
-          <img src="assets/launch-bg-2.png" alt="GoManga launch artwork">
-          <div>
-            <p class="section-kicker">Before sending</p>
-            <h2 id="support-notes-title">到 Issues 頁面後請選擇模板。</h2>
-            <ul>
-              <li>請先搜尋既有 issue，避免重複回報。</li>
-              <li>按 New issue 後，選擇 GoManga bug report 並照欄位填寫。</li>
-              <li>閱讀器問題：請填章節切換、閱讀方向與是否可穩定重現。</li>
-              <li>來源問題：只填公開 host 或來源名稱，不要貼 cookie、token 或帳密。</li>
-              <li>診斷日誌：先確認內容不含私密資料再附上。</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section preview-section" aria-labelledby="preview-title">
-      <div class="shell preview-layout">
-        <div>
-          <p class="section-kicker">Generated issue</p>
-          <h2 id="preview-title">送出前的 issue 內容</h2>
-          <p>填寫欄位後，這裡會即時顯示可貼到 GitHub issue 的 Markdown 草稿。GitHub Issues 內也有正式模板可照著填寫。</p>
         </div>
-        <pre class="issue-preview" data-preview>等待填寫問題內容...</pre>
+
+        <div class="field-row">
+          <label class="field">
+            <span><span data-t="zh">App 版本</span><span data-t="en">App version</span></span>
+            <input name="appVersion" type="text" data-ph-zh="例如：1.0.0 (42)" data-ph-en="e.g. 1.0.0 (42)" placeholder="例如：1.0.0 (42)">
+          </label>
+          <label class="field">
+            <span><span data-t="zh">iOS / iPadOS 版本</span><span data-t="en">iOS / iPadOS version</span></span>
+            <input name="osVersion" type="text" data-ph-zh="例如：iOS 18.5" data-ph-en="e.g. iOS 18.5" placeholder="例如：iOS 18.5">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label class="field">
+            <span><span data-t="zh">裝置</span><span data-t="en">Device</span></span>
+            <input name="device" type="text" data-ph-zh="例如：iPhone 16 Pro" data-ph-en="e.g. iPhone 16 Pro" placeholder="例如：iPhone 16 Pro">
+          </label>
+          <label class="field">
+            <span><span data-t="zh">來源或 host（選填）</span><span data-t="en">Source or host (optional)</span></span>
+            <input name="source" type="text"
+              data-ph-zh="只填可公開資訊，勿貼 cookie/token"
+              data-ph-en="Public info only — no cookies or tokens"
+              placeholder="只填可公開資訊，勿貼 cookie/token">
+            <span class="hint"><span data-t="zh">請勿貼帳密、cookie 或 token。</span><span data-t="en">No credentials, cookies, or tokens.</span></span>
+          </label>
+        </div>
+
+        <label class="field">
+          <span><span data-t="zh">重現步驟</span><span data-t="en">Steps to reproduce</span> <span class="req">*</span></span>
+          <textarea name="steps" required rows="5"
+            data-ph-zh="1. 開啟…&#10;2. 點選…&#10;3. 看到…"
+            data-ph-en="1. Open …&#10;2. Tap …&#10;3. See …"
+            placeholder="1. 開啟…&#10;2. 點選…&#10;3. 看到…"></textarea>
+        </label>
+
+        <label class="field">
+          <span><span data-t="zh">預期結果</span><span data-t="en">Expected result</span></span>
+          <textarea name="expected" rows="3"
+            data-ph-zh="你原本預期 GoManga 要做什麼？"
+            data-ph-en="What did you expect GoManga to do?"
+            placeholder="你原本預期 GoManga 要做什麼？"></textarea>
+        </label>
+
+        <label class="field">
+          <span><span data-t="zh">實際結果</span><span data-t="en">Actual result</span> <span class="req">*</span></span>
+          <textarea name="actual" required rows="4"
+            data-ph-zh="實際看到的錯誤、空白、卡住、閃退或錯誤訊息。"
+            data-ph-en="The error, blank, freeze, crash, or message you actually saw."
+            placeholder="實際看到的錯誤、空白、卡住、閃退或錯誤訊息。"></textarea>
+        </label>
+
+        <label class="field">
+          <span><span data-t="zh">診斷資訊（選填）</span><span data-t="en">Diagnostics (optional)</span></span>
+          <textarea name="diagnostics" rows="4"
+            data-ph-zh="可貼錯誤摘要、截圖說明或診斷重點。請先移除私密資料。"
+            data-ph-en="Error summary, screenshot notes, or diagnostic highlights. Remove anything private first."
+            placeholder="可貼錯誤摘要、截圖說明或診斷重點。請先移除私密資料。"></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input name="diagnosticsAvailable" type="checkbox">
+          <span><span data-t="zh">我可以另外附上 GoManga 診斷日誌或截圖</span><span data-t="en">I can attach a GoManga diagnostic log or screenshots</span></span>
+        </label>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit"><span data-t="zh">前往 GitHub Issues</span><span data-t="en">Go to GitHub Issues</span></button>
+          <button class="btn btn--dark" type="button" data-copy-template><span data-t="zh">複製草稿</span><span data-t="en">Copy draft</span></button>
+          <a class="btn btn--dark" href="https://github.com/go-manga/GoMangaApp/issues" rel="noopener"><span data-t="zh">查看既有 issues</span><span data-t="en">Browse issues</span></a>
+        </div>
+      </form>
+
+      <aside class="report-aside" aria-labelledby="report-notes">
+        <div class="aside-card">
+          <img src="assets/launch-bg-2.png" alt="GoManga launch artwork" loading="lazy">
+          <p class="kicker"><span data-t="zh">送出前</span><span data-t="en">Before you send</span></p>
+          <h2 id="report-notes"><span data-t="zh">到 Issues 後請選擇模板</span><span data-t="en">Pick the template on Issues</span></h2>
+          <ul>
+            <li><span data-t="zh">先搜尋既有 issue，避免重複回報。</span><span data-t="en">Search existing issues first to avoid duplicates.</span></li>
+            <li><span data-t="zh">按 New issue 後，選 GoManga bug report 並照欄位填寫。</span><span data-t="en">Hit New issue, choose “GoManga bug report,” and fill the fields.</span></li>
+            <li><span data-t="zh">閱讀器問題：附上章節切換、閱讀方向與能否穩定重現。</span><span data-t="en">Reader issues: include chapter switching, reading direction, and whether it reproduces.</span></li>
+            <li><span data-t="zh">來源問題：只填公開 host，勿貼 cookie、token 或帳密。</span><span data-t="en">Source issues: public host only — never cookies, tokens, or credentials.</span></li>
+            <li><span data-t="zh">診斷日誌：先確認不含私密資料再附上。</span><span data-t="en">Diagnostics: confirm there's nothing private before attaching.</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section section--alt" style="margin-top:40px;border-radius:var(--radius);border:2px solid #000;box-shadow:var(--shadow-hard);padding:30px">
+      <div class="section-head" style="margin-bottom:18px">
+        <p class="kicker"><span data-t="zh">產生的內容</span><span data-t="en">Generated issue</span></p>
+        <h2 class="section-title" style="font-size:24px"><span data-t="zh">送出前的 issue 草稿</span><span data-t="en">Your issue draft</span></h2>
+        <p class="lead" style="font-size:15px"><span data-t="zh">填寫欄位後，這裡會即時產生可貼到 GitHub issue 的 Markdown。GitHub Issues 內也有正式模板可照著填。</span><span data-t="en">As you type, the Markdown you can paste into a GitHub issue updates live. GitHub Issues also has a structured template to follow.</span></p>
       </div>
+      <pre class="report-preview" data-preview aria-live="polite">…</pre>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-layout">
-      <span>© 2026 GoManga Team</span>
-      <span>Do not include secrets in public reports.</span>
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 GoManga Team</span>
+        <span data-t="zh">公開回報請勿包含任何私密資料。</span><span data-t="en">Never include secrets in public reports.</span>
+      </div>
     </div>
   </footer>
 
+  <script src="assets/lang.js"></script>
   <script src="assets/report.js"></script>
 </body>
 </html>

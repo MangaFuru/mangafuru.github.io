@@ -1,19 +1,48 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant"
+  data-title-zh="頁面不存在 | GoManga"
+  data-title-en="Page not found | GoManga">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>頁面不存在 | GoManga</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="document-page">
-  <main class="document-shell center-document">
-    <img class="not-found-icon" src="assets/app-icon.png" alt="" width="120" height="120">
-    <p class="section-kicker">404</p>
-    <h1>找不到這個頁面</h1>
-    <p>這個連結可能已經移動或不存在。</p>
-    <p><a class="button primary" href="index.html">回到 GoManga 首頁</a></p>
+<body class="doc-page">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="GoManga">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>GoManga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="notfound">
+    <img src="assets/app-icon.png" alt="GoManga" width="132" height="132">
+    <p class="code">404</p>
+    <h1><span data-t="zh">這一頁衝過頭了</span><span data-t="en">This page ran off the panel</span></h1>
+    <p><span data-t="zh">這個連結可能已經移動或不存在。回到主場，繼續閱讀。</span><span data-t="en">That link may have moved or never existed. Head back home and keep reading.</span></p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn btn--primary" href="index.html"><span data-t="zh">回到首頁</span><span data-t="en">Back to home</span></a>
+      <a class="btn btn--ghost" href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report an issue</span></a>
+    </div>
   </main>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>
