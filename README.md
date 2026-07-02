@@ -1,6 +1,6 @@
-# GoManga Website
+# MangaFuru Website
 
-Static GitHub Pages site for GoManga product information, support, privacy policy, and terms of use.
+Static GitHub Pages site for MangaFuru product information, support, privacy policy, and terms of use.
 
 ## Scope
 
@@ -13,10 +13,10 @@ This repository owns the public website content:
 - `privacy.html` - privacy policy.
 - `terms.html` - terms of use.
 - `404.html` - not-found page.
-- `assets/styles.css` - manga "GO!" design system (dark, comic energy; no framework).
+- `assets/styles.css` - manga "FURU!" design system (dark, comic energy; no framework).
 - `assets/lang.js` - first-party bilingual switch (中 / EN).
 - `assets/report.js` - support-page issue-draft generator.
-- `assets/*.png` - brand visuals copied from the GoManga app.
+- `assets/*.png` - brand visuals copied from the MangaFuru app.
 
 No build step is required. GitHub Pages can serve the repository root directly.
 

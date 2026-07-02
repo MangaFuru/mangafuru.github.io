@@ -1,4 +1,4 @@
-/* GoManga bilingual switch — first-party, no third-party scripts.
+/* MangaFuru bilingual switch — first-party, no third-party scripts.
    Without JS the static markup keeps lang="zh-Hant" and CSS hides the
    English blocks, so the site still renders correctly. */
 (function () {
