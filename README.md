@@ -7,7 +7,9 @@ Static GitHub Pages site for MangaFuru product information, support, privacy pol
 This repository owns the public website content:
 
 - `index.html` - product overview and positioning.
-- `getting-started.html` - basic app workflow.
+- `getting-started.html` - guide hub for local files, Komga, external sources, reading, backup, and troubleshooting.
+- `repositories.html` - advanced user guide for compatible repository URLs and external-source lifecycle.
+- `source-development.html` - developer guide for building a source package and publishing it through a repository.
 - `faq.html` - source, support, privacy, and issue-report boundaries.
 - `support.html` - guided GitHub issue form.
 - `privacy.html` - privacy policy.
@@ -39,4 +41,5 @@ Every page ships both languages inline. The switch keys off `<html lang>`:
 - Do not promise support for a specific third-party source or host.
 - Keep all legal/support pages in this repository, not in the `MangaFuru` issue-intake repo.
 - Do not add analytics or third-party scripts unless the privacy policy is updated first.
+- Use `https://apps.apple.com/us/app/mangafuru/id6786539287` for public download links.
 - Legal/privacy contact is `gomanga.support@gmail.com`; keep it consistent across pages.

@@ -23,11 +23,12 @@
         <span>MangaFuru</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a href="getting-started.html"><span data-t="zh">指南</span><span data-t="en">Guides</span></a>
         <a aria-current="page" href="faq.html">FAQ</a>
         <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
         <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
         <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        <a class="nav-download" href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">下載</span><span data-t="en">Download</span></a>
       </nav>
       <div class="lang-toggle" role="group" aria-label="Language / 語言">
         <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
@@ -51,6 +52,11 @@
   <main class="doc-shell doc-body">
     <div class="faq-list">
       <details class="faq-item" open>
+        <summary><span data-t="zh">MangaFuru 要去哪裡下載？</span><span data-t="en">Where can I download MangaFuru?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">請從 <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener">App Store 官方頁面</a>下載。MangaFuru 目前需要 iOS 18.6 或以上版本。</span><span data-t="en">Download it from the <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener">official App Store page</a>. MangaFuru currently requires iOS 18.6 or later.</span></p></div>
+      </details>
+
+      <details class="faq-item">
         <summary><span data-t="zh">我可以讀自己的 EPUB、PDF、CBZ 檔案嗎？</span><span data-t="en">Can I read my own EPUB, PDF, and CBZ files?</span></summary>
         <div class="faq-body"><p><span data-t="zh">可以。MangaFuru 內建本機閱讀，能直接開啟你裝置或本機網路上的 EPUB、PDF 與 CBZ，並保留續讀進度。這些是你自己提供的檔案，App 不代管也不散佈任何內容。</span><span data-t="en">Yes. MangaFuru includes local reading and can open EPUB, PDF, and CBZ files on your device or local network, with resume preserved. These are files you supply yourself — the app hosts and distributes no content.</span></p></div>
       </details>
@@ -62,12 +68,12 @@
 
       <details class="faq-item">
         <summary><span data-t="zh">MangaFuru 會提供漫畫內容或來源清單嗎？</span><span data-t="en">Does MangaFuru provide manga content or a list of sources?</span></summary>
-        <div class="faq-body"><p><span data-t="zh">不會。MangaFuru 是閱讀器與來源設定框架，不代管、不販售、不散佈漫畫內容，也不提供官方內容目錄。來源、檔案與內容由你自行設定與管理。</span><span data-t="en">No. MangaFuru is a reader and a source-configuration framework. It does not host, sell, or distribute manga content, and ships no official catalog. Sources, files, and content are yours to configure and manage.</span></p></div>
+        <div class="faq-body"><p><span data-t="zh">不會。MangaFuru 只會顯示你自己加入的內容，不代管、不販售、不散佈漫畫，也不提供官方內容目錄。檔案、連線方式與內容都由你自行選擇與管理。</span><span data-t="en">No. MangaFuru only shows content you add yourself. It does not host, sell, or distribute manga and ships with no official catalog. Your files, connections, and content remain yours to choose and manage.</span></p></div>
       </details>
 
       <details class="faq-item">
-        <summary><span data-t="zh">為什麼需要 Repositories 和 Sources？</span><span data-t="en">Why are there both repositories and sources?</span></summary>
-        <div class="faq-body"><p><span data-t="zh">Repositories 是來源資訊的入口；Sources 是實際瀏覽、搜尋、開啟詳情與載入章節的來源。這個流程讓 App 可以把來源設定、書庫、清單與閱讀器分開管理。</span><span data-t="en">A repository is the entry point for source information; a source is what actually browses, searches, opens details, and loads chapters. Splitting them lets the app manage source setup, library, lists, and the reader separately.</span></p></div>
+        <summary><span data-t="zh">Sources 和 Repositories 是什麼？一開始就要設定嗎？</span><span data-t="en">What are Sources and Repositories? Do I need them right away?</span></summary>
+        <div class="faq-body"><p><span data-t="zh">Source（內容來源）就是 MangaFuru 從哪裡讀取內容，例如本機檔案或你的 Komga。Repository 則只是提供「可安裝外部來源」的清單，本身沒有漫畫。讀自己的 EPUB、PDF、CBZ 或連 Komga 時，不需要先設定 Repository；只有已經知道要加入哪個外部來源時才會用到。詳情請見 <a href="repositories.html">Repository 與外部來源</a>。</span><span data-t="en">A Source is where MangaFuru reads content from, such as local files or your Komga. A Repository is only a list of external source connectors available to install; it contains no manga. You do not need a repository for EPUB, PDF, CBZ, or Komga. Use one only when you already know which external source you want to add. See <a href="repositories.html">Repositories and external sources</a> for details.</span></p></div>
       </details>
 
       <details class="faq-item">
@@ -112,7 +118,8 @@
       <div class="footer-bottom" style="border-top:0">
         <span>© 2026 MangaFuru Team</span>
         <span>
-          <a href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a> ·
+          <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">App Store 下載</span><span data-t="en">Download</span></a> ·
+          <a href="getting-started.html"><span data-t="zh">指南</span><span data-t="en">Guides</span></a> ·
           <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a> ·
           <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a> ·
           <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>

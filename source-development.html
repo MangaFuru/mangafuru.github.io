@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant"
+  data-title-zh="開發與發布自己的來源 | MangaFuru"
+  data-title-en="Develop and publish your own source | MangaFuru"
+  data-desc-zh="面向開發者的 MangaFuru 來源套件與 Repository 發布概覽，包括所需能力、套件責任、索引格式與相容性驗證。"
+  data-desc-en="A developer overview of MangaFuru source packages and repository delivery, including prerequisites, package responsibilities, index format, and compatibility testing.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>開發與發布自己的來源 | MangaFuru</title>
+  <meta name="description" content="面向開發者的 MangaFuru 來源套件與 Repository 發布概覽，包括所需能力、套件責任、索引格式與相容性驗證。">
+  <meta property="og:title" content="開發與發布自己的 MangaFuru 來源">
+  <meta property="og:description" content="了解來源套件、APK 與 Repository index 的發布關係。">
+  <meta property="og:image" content="assets/social-mangafuru.png">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="doc-page">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="MangaFuru">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>MangaFuru</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a aria-current="page" href="getting-started.html"><span data-t="zh">指南</span><span data-t="en">Guides</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        <a class="nav-download" href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">下載</span><span data-t="en">Download</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">開發者指南</span><span data-t="en">Developer guide</span></p>
+      <h1 class="doc-title"><span data-t="zh">開發與發布自己的來源</span><span data-t="en">Develop and publish your own source</span></h1>
+      <p class="updated"><span data-t="zh">這不是一般使用者的必要設定。你需要具備 Kotlin、Gradle、HTTP 與網頁解析經驗。</span><span data-t="en">This is not required for ordinary use. You need experience with Kotlin, Gradle, HTTP, and web parsing.</span></p>
+    </div>
+  </section>
+
+  <main class="doc-shell doc-body">
+    <div class="summary-card" style="margin-top:0">
+      <p><span data-t="zh"><strong>MangaFuru 目前沒有提供獨立的來源 SDK 或從 App 直接建立來源的工具。</strong>你需要自行建立相容的 Android 來源套件、輸出 APK，並透過相容 Repository index 發布。App 目前不支援直接選取 APK 安裝。</span><span data-t="en"><strong>MangaFuru does not currently provide a standalone source SDK or an in-app source builder.</strong> You must create a compatible Android source package, produce an APK, and publish it through a compatible repository index. Direct APK file installation is not currently supported.</span></p>
+    </div>
+
+    <nav class="toc" aria-label="On this page">
+      <h2><span data-t="zh">本頁內容</span><span data-t="en">On this page</span></h2>
+      <ol>
+        <li><a href="#prerequisites"><span data-t="zh">開始前準備</span><span data-t="en">Prerequisites</span></a></li>
+        <li><a href="#contract"><span data-t="zh">來源套件責任</span><span data-t="en">Package responsibilities</span></a></li>
+        <li><a href="#publish"><span data-t="zh">Repository 結構</span><span data-t="en">Repository structure</span></a></li>
+        <li><a href="#index"><span data-t="zh">索引資料</span><span data-t="en">Index metadata</span></a></li>
+        <li><a href="#verify"><span data-t="zh">相容性驗證</span><span data-t="en">Compatibility checks</span></a></li>
+      </ol>
+    </nav>
+
+    <section class="guide-section" id="prerequisites">
+      <h2><span class="n">01</span><span data-t="zh">開始前需要的能力</span><span data-t="en">What you need before starting</span></h2>
+      <ul class="doc-checklist">
+        <li><span data-t="zh">Kotlin 與 Gradle／Android 專案建置。</span><span data-t="en">Kotlin and Gradle/Android project builds.</span></li>
+        <li><span data-t="zh">HTTP 請求、狀態碼、header、cookie 與登入流程。</span><span data-t="en">HTTP requests, status codes, headers, cookies, and login flows.</span></li>
+        <li><span data-t="zh">HTML 結構、CSS selector 與網頁解析。</span><span data-t="en">HTML structure, CSS selectors, and web parsing.</span></li>
+        <li><span data-t="zh">目標服務的使用條款、存取權與合理請求頻率。</span><span data-t="en">The target service's terms, access rights, and responsible request rates.</span></li>
+      </ul>
+      <div class="doc-note"><span data-t="zh">不要以真實帳密或私密 token 寫入原始碼、APK、測試資料或公開 Repository。</span><span data-t="en">Never place real credentials or private tokens in source code, APKs, test fixtures, or a public repository.</span></div>
+    </section>
+
+    <section class="guide-section" id="contract">
+      <h2><span class="n">02</span><span data-t="zh">來源套件需要負責什麼？</span><span data-t="en">What must a source package do?</span></h2>
+      <p><span data-t="zh">來源套件不是漫畫資料檔；它是可執行的連接器。一般會負責以下流程：</span><span data-t="en">A source package is not a manga data file; it is an executable connector. It normally owns these flows:</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>目錄與搜尋。</strong>回傳熱門、最新、搜尋結果與下一頁資訊。</span><span data-t="en"><strong>Catalog and search.</strong> Return popular, latest, search results, and pagination state.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>作品與章節。</strong>提供標題、封面、說明、狀態、章節清單與穩定識別資料。</span><span data-t="en"><strong>Titles and chapters.</strong> Provide title, cover, description, status, chapter list, and stable identity data.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>閱讀頁面。</strong>依正確順序回傳每一頁，並處理必要的 request header。</span><span data-t="en"><strong>Reader pages.</strong> Return every page in the correct order and handle required request headers.</span></li>
+        <li><span class="n">4</span><span data-t="zh"><strong>可選設定。</strong>若服務需要登入、mirror 或其他選項，提供清楚且不洩漏敏感資料的設定欄位。</span><span data-t="en"><strong>Optional settings.</strong> If the service needs login, mirrors, or other options, expose clear settings without leaking sensitive data.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="publish">
+      <h2><span class="n">03</span><span data-t="zh">透過 Repository 發布</span><span data-t="en">Publish through a repository</span></h2>
+      <p><span data-t="zh">建置完成後會得到 APK。MangaFuru 不是直接讀取你的 Kotlin 原始碼，而是從 Repository index 找到套件資訊，再下載 APK。傳統 Repository 通常使用以下結構：</span><span data-t="en">A successful build produces an APK. MangaFuru does not read your Kotlin source code directly; it finds package metadata in a repository index and then downloads the APK. A traditional repository usually follows this structure:</span></p>
+      <pre class="code-block"><code>repo/
+├── index.min.json
+├── apk/
+│   └── example-source-v1.0.1.apk
+└── icon/
+    └── com.example.source.png</code></pre>
+      <p><span data-t="zh">網站需能透過 HTTPS 公開讀取 index、APK 與 icon。檔名大小寫與 index 內容必須完全一致。</span><span data-t="en">The index, APK, and icon must be publicly readable over HTTPS. Filename case and index metadata must match exactly.</span></p>
+    </section>
+
+    <section class="guide-section" id="index">
+      <h2><span class="n">04</span><span data-t="zh">最小索引資料</span><span data-t="en">Minimum index metadata</span></h2>
+      <p><span data-t="zh"><code>index.min.json</code> 是套件索引，不是內容目錄。以下是用虛構資料表示的傳統格式：</span><span data-t="en"><code>index.min.json</code> is a package index, not a content catalog. This fictional example shows the traditional format:</span></p>
+      <pre class="code-block"><code>[
+  {
+    "name": "Example Source",
+    "pkg": "com.example.source",
+    "apk": "example-source-v1.0.1.apk",
+    "lang": "en",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "name": "Example Source",
+        "lang": "en",
+        "id": "123456789",
+        "baseUrl": "https://example.com"
+      }
+    ]
+  }
+]</code></pre>
+      <ul class="doc-checklist">
+        <li><span data-t="zh"><code>pkg</code> 是套件的穩定安裝識別，不要在更新時隨意更換。</span><span data-t="en"><code>pkg</code> is the stable install identity; do not casually change it between updates.</span></li>
+        <li><span data-t="zh"><code>code</code> 必須在每次發布更新時遞增。</span><span data-t="en"><code>code</code> must increase for every published update.</span></li>
+        <li><span data-t="zh"><code>sources[].id</code> 必須保持穩定，否則既有書庫可能無法對回原來源。</span><span data-t="en"><code>sources[].id</code> must stay stable or existing library items may no longer map back to their source.</span></li>
+        <li><span data-t="zh"><code>apk</code> 必須對應 <code>apk/</code> 內實際存在的檔案。</span><span data-t="en"><code>apk</code> must match a real file under <code>apk/</code>.</span></li>
+      </ul>
+    </section>
+
+    <section class="guide-section" id="verify">
+      <h2><span class="n">05</span><span data-t="zh">不要只確認「可以建置」</span><span data-t="en">Do not stop at “it builds”</span></h2>
+      <p><span data-t="zh">來源在 Android 工具鏈中成功產生 APK，不代表一定能在 MangaFuru 的 iOS 執行環境完整運作。發布前至少逐層驗證：</span><span data-t="en">Producing an APK with the Android toolchain does not guarantee complete compatibility with MangaFuru's iOS runtime. Before publishing, verify every layer:</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>Repository 可載入。</strong>用完整 HTTPS index URL 加入，確認套件會顯示。</span><span data-t="en"><strong>The repository loads.</strong> Add the full HTTPS index URL and confirm the package appears.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>來源可安裝。</strong>確認 APK 能下載、轉換、載入，且來源出現在「探索」。</span><span data-t="en"><strong>The source installs.</strong> Confirm the APK downloads, converts, loads, and appears in Browse.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>完整閱讀流程可用。</strong>逐一測試熱門、最新、搜尋、作品詳情、章節與實際頁面。</span><span data-t="en"><strong>The full reading flow works.</strong> Test popular, latest, search, title details, chapters, and real pages.</span></li>
+        <li><span class="n">4</span><span data-t="zh"><strong>更新不破壞既有資料。</strong>提高版本後再次安裝，確認穩定 ID、書庫與續讀仍能對應。</span><span data-t="en"><strong>Updates preserve existing data.</strong> Publish a higher version and confirm stable IDs, library items, and resume mapping still work.</span></li>
+      </ol>
+      <div class="doc-note"><span data-t="zh"><strong>相容性限制：</strong>來源套件若依賴尚未支援的 Android API、較新的套件介面或特殊 bytecode，可能安裝失敗或執行時錯誤。遇到問題時，請提供可重現步驟與去敏感化的錯誤資訊。</span><span data-t="en"><strong>Compatibility limits:</strong> A source package can fail to install or run if it depends on unsupported Android APIs, a newer package interface, or unusual bytecode. When reporting a problem, include reproducible steps and sanitized error details.</span></div>
+      <p><span data-t="zh">一般使用者的加入與管理步驟請見 <a href="repositories.html">Repository 與外部來源</a>。</span><span data-t="en">For ordinary install and management steps, see <a href="repositories.html">Repositories and external sources</a>.</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 MangaFuru Team</span>
+        <span>
+          <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">App Store 下載</span><span data-t="en">Download</span></a> ·
+          <a href="getting-started.html"><span data-t="zh">上手指南</span><span data-t="en">Getting started</span></a> ·
+          <a href="repositories.html">Repository</a> ·
+          <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/lang.js"></script>
+</body>
+</html>

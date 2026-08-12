@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant"
+  data-title-zh="Repository 與外部來源 | MangaFuru"
+  data-title-en="Repositories and external sources | MangaFuru"
+  data-desc-zh="了解 MangaFuru 的 Repository 是什麼，以及如何安全加入相容網址、安裝、更新與移除外部來源。"
+  data-desc-en="Learn what a MangaFuru repository is and how to safely add a compatible URL, then install, update, and remove external sources.">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repository 與外部來源 | MangaFuru</title>
+  <meta name="description" content="了解 MangaFuru 的 Repository 是什麼，以及如何安全加入相容網址、安裝、更新與移除外部來源。">
+  <meta property="og:title" content="MangaFuru Repository 與外部來源">
+  <meta property="og:description" content="Repository 是可安裝來源套件的索引，不是漫畫內容。">
+  <meta property="og:image" content="assets/social-mangafuru.png">
+  <meta name="theme-color" content="#0a0a0c">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="doc-page">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="MangaFuru">
+        <img src="assets/app-icon.png" alt="" width="38" height="38">
+        <span>MangaFuru</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a aria-current="page" href="getting-started.html"><span data-t="zh">指南</span><span data-t="en">Guides</span></a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
+        <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        <a class="nav-download" href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">下載</span><span data-t="en">Download</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="doc-hero">
+    <div class="hero-speed" aria-hidden="true"></div>
+    <div class="doc-shell">
+      <p class="kicker"><span data-t="zh">進階使用指南</span><span data-t="en">Advanced user guide</span></p>
+      <h1 class="doc-title"><span data-t="zh">Repository 與外部來源</span><span data-t="en">Repositories and external sources</span></h1>
+      <p class="updated"><span data-t="zh">只有已經取得可信 Repository 網址、並知道自己要連接哪個來源時，才需要這篇。</span><span data-t="en">You need this guide only when you already have a trusted repository URL and know which source you want to connect.</span></p>
+    </div>
+  </section>
+
+  <main class="doc-shell doc-body">
+    <div class="summary-card" style="margin-top:0">
+      <p><span data-t="zh"><strong>Repository 不是漫畫網站，也不包含漫畫。</strong>它是一份可安裝「來源連接器」的索引。來源安裝後，MangaFuru 才能依該來源的規則連接外部服務。</span><span data-t="en"><strong>A repository is not a manga website and contains no manga.</strong> It is an index of installable source connectors. After a source is installed, MangaFuru can connect to an external service according to that source's rules.</span></p>
+    </div>
+
+    <nav class="toc" aria-label="On this page">
+      <h2><span data-t="zh">本頁內容</span><span data-t="en">On this page</span></h2>
+      <ol>
+        <li><a href="#need"><span data-t="zh">什麼時候需要</span><span data-t="en">When you need one</span></a></li>
+        <li><a href="#before"><span data-t="zh">加入前先確認</span><span data-t="en">Before adding</span></a></li>
+        <li><a href="#add"><span data-t="zh">加入 Repository</span><span data-t="en">Add a repository</span></a></li>
+        <li><a href="#manage"><span data-t="zh">安裝與管理來源</span><span data-t="en">Install and manage sources</span></a></li>
+        <li><a href="#safety"><span data-t="zh">安全與責任</span><span data-t="en">Safety and responsibility</span></a></li>
+      </ol>
+    </nav>
+
+    <section class="guide-section" id="need">
+      <h2><span class="n">01</span><span data-t="zh">什麼時候才需要 Repository？</span><span data-t="en">When do you need a repository?</span></h2>
+      <p><span data-t="zh">只有要安裝外部來源時才需要。以下兩種情況完全不需要 Repository：</span><span data-t="en">You need one only to install an external source. These two paths do not use repositories at all:</span></p>
+      <ul class="doc-checklist">
+        <li><span data-t="zh">從「檔案」匯入自己的 EPUB、PDF 或 CBZ。</span><span data-t="en">Import your own EPUB, PDF, or CBZ from Files.</span></li>
+        <li><span data-t="zh">連接你已經自行架設的 Komga 伺服器。</span><span data-t="en">Connect a Komga server you already host yourself.</span></li>
+      </ul>
+      <div class="doc-note"><span data-t="zh">如果你不知道 Repository 網址要從哪裡取得，先不要新增。MangaFuru 不提供或推薦來源清單。</span><span data-t="en">If you do not know where a repository URL should come from, do not add one yet. MangaFuru does not provide or recommend source lists.</span></div>
+    </section>
+
+    <section class="guide-section" id="before">
+      <h2><span class="n">02</span><span data-t="zh">加入前先確認三件事</span><span data-t="en">Check three things before adding</span></h2>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>你信任提供者。</strong>Repository 會提供可執行的來源套件，不只是文字清單；不要加入來路不明的網址。</span><span data-t="en"><strong>You trust the provider.</strong> A repository distributes executable source packages, not only text metadata. Do not add unknown URLs.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>你有權使用相關服務與內容。</strong>Repository 存在不代表其中每個來源都適合你的所在地、帳號或使用情境。</span><span data-t="en"><strong>You have the right to use the service and content.</strong> A listed source is not automatically appropriate for your region, account, or use case.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>你拿到的是完整相容網址。</strong>通常會是 HTTPS 網址，並以 <code>index.min.json</code> 結尾。</span><span data-t="en"><strong>You have the complete compatible URL.</strong> It is normally an HTTPS URL ending in <code>index.min.json</code>.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="add">
+      <h2><span class="n">03</span><span data-t="zh">在 MangaFuru 加入 Repository</span><span data-t="en">Add a repository in MangaFuru</span></h2>
+      <p class="route"><span data-t="zh">探索 → 右上角 ＋ → Sources → 頁面底部「新增自訂 Repository URL」</span><span data-t="en">Browse → top-right + → Sources → “Add Custom Repository URL” at the bottom</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>閱讀外部來源提醒。</strong>第一次加入時，確認三項聲明後才能繼續。</span><span data-t="en"><strong>Review the external-source notice.</strong> The first time you add one, acknowledge all three statements before continuing.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>輸入辨識名稱。</strong>名稱只供你自己辨認，不會改變遠端內容。</span><span data-t="en"><strong>Enter a label.</strong> The name is only for your own reference and does not change remote content.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>貼上完整網址並確認新增。</strong>MangaFuru 會先檢查網址與索引格式；成功後 Repository 會出現在清單。</span><span data-t="en"><strong>Paste the full URL and confirm.</strong> MangaFuru checks the URL and index format first; after success, the repository appears in the list.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="manage">
+      <h2><span class="n">04</span><span data-t="zh">安裝、更新與移除來源</span><span data-t="en">Install, update, and remove sources</span></h2>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>打開剛加入的 Repository。</strong>你會看到它提供的可用來源；可用搜尋與篩選縮小範圍。</span><span data-t="en"><strong>Open the repository you added.</strong> You will see its available sources; use search and filters to narrow the list.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>在需要的來源旁點「新增」。</strong>等待安裝完成，再回到「探索」開啟來源。</span><span data-t="en"><strong>Tap Add beside the source you need.</strong> Wait for installation to finish, then return to Browse and open the source.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>有新版時使用更新動作。</strong>來源網站改動時，通常需要由套件提供者發布新版；MangaFuru 無法保證第三方服務永久相容。</span><span data-t="en"><strong>Use Update when a newer version appears.</strong> Website changes normally require the package provider to publish an update; MangaFuru cannot guarantee permanent third-party compatibility.</span></li>
+        <li><span class="n">4</span><span data-t="zh"><strong>不再使用時向左滑動移除。</strong>移除來源前，先確認書庫與備份中是否仍有依賴該來源的作品。</span><span data-t="en"><strong>Swipe left to remove a source you no longer use.</strong> First check whether your library or backup still contains titles that depend on it.</span></li>
+      </ol>
+      <div class="doc-note"><span data-t="zh"><strong>目前不支援直接選取 APK 安裝。</strong>外部來源必須透過相容 Repository 加入；本機檔案與 Komga 則走各自的內建流程。</span><span data-t="en"><strong>Direct APK file installation is not currently supported.</strong> External sources must be added through a compatible repository; local files and Komga use their own built-in flows.</span></div>
+    </section>
+
+    <section class="guide-section" id="safety">
+      <h2><span class="n">05</span><span data-t="zh">安全與責任</span><span data-t="en">Safety and responsibility</span></h2>
+      <ul class="doc-checklist">
+        <li><span data-t="zh">優先使用 HTTPS，不要為未知來源開啟不安全 HTTP。</span><span data-t="en">Prefer HTTPS and do not enable insecure HTTP for an unknown source.</span></li>
+        <li><span data-t="zh">登入、token、cookie 與網站驗證只應交給你信任的來源。</span><span data-t="en">Provide logins, tokens, cookies, or website verification only to sources you trust.</span></li>
+        <li><span data-t="zh">不要在公開 issue 貼出帳密、完整 cookie、私密 token 或付費內容。</span><span data-t="en">Never post credentials, full cookies, private tokens, or paid content in a public issue.</span></li>
+        <li><span data-t="zh">來源失效可能是第三方服務改版、下線、限制地區或變更條款，不一定是 App 問題。</span><span data-t="en">A source can fail because a third-party service changed, went offline, restricted regions, or changed its terms; it is not always an app problem.</span></li>
+      </ul>
+      <p><span data-t="zh">如果你要發布自己開發的來源，請接著閱讀 <a href="source-development.html">開發與發布自己的來源</a>。</span><span data-t="en">To publish a source you developed yourself, continue to <a href="source-development.html">Develop and publish your own source</a>.</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:0">
+        <span>© 2026 MangaFuru Team</span>
+        <span>
+          <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">App Store 下載</span><span data-t="en">Download</span></a> ·
+          <a href="getting-started.html"><span data-t="zh">上手指南</span><span data-t="en">Getting started</span></a> ·
+          <a href="source-development.html"><span data-t="zh">來源開發</span><span data-t="en">Source development</span></a> ·
+          <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/lang.js"></script>
+</body>
+</html>

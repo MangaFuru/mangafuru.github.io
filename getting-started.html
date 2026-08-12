@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="zh-Hant"
-  data-title-zh="上手指南 | MangaFuru"
-  data-title-en="Get started | MangaFuru"
-  data-desc-zh="MangaFuru 上手指南：Repositories、Sources、書庫、清單與閱讀器的基本使用路徑。"
-  data-desc-en="MangaFuru getting-started guide: repositories, sources, library, lists, and the reader.">
+  data-title-zh="使用指南 | MangaFuru"
+  data-title-en="Guides | MangaFuru"
+  data-desc-zh="第一次使用 MangaFuru：先了解 App 不附漫畫內容，再依你手上的檔案、Komga 或其他來源選擇最適合的開始方式。"
+  data-desc-en="New to MangaFuru? Learn why the app has no bundled manga, then start with your files, Komga, or another source you already know.">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>上手指南 | MangaFuru</title>
-  <meta name="description" content="MangaFuru 上手指南：Repositories、Sources、書庫、清單與閱讀器的基本使用路徑。">
-  <meta property="og:title" content="MangaFuru 上手指南">
+  <title>使用指南 | MangaFuru</title>
+  <meta name="description" content="第一次使用 MangaFuru：先了解 App 不附漫畫內容，再依你手上的檔案、Komga 或其他來源選擇最適合的開始方式。">
+  <meta property="og:title" content="MangaFuru 使用指南">
+  <meta property="og:description" content="MangaFuru 不附漫畫內容。先從自己的 EPUB／PDF／CBZ 開始，或連接已經在使用的 Komga。">
   <meta property="og:image" content="assets/social-mangafuru.png">
   <meta name="theme-color" content="#0a0a0c">
   <link rel="icon" href="assets/app-icon.png">
@@ -23,11 +24,12 @@
         <span>MangaFuru</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a aria-current="page" href="getting-started.html"><span data-t="zh">上手</span><span data-t="en">Get started</span></a>
+        <a aria-current="page" href="getting-started.html"><span data-t="zh">指南</span><span data-t="en">Guides</span></a>
         <a href="faq.html">FAQ</a>
         <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a>
         <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a>
         <a href="terms.html"><span data-t="zh">條款</span><span data-t="en">Terms</span></a>
+        <a class="nav-download" href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">下載</span><span data-t="en">Download</span></a>
       </nav>
       <div class="lang-toggle" role="group" aria-label="Language / 語言">
         <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
@@ -39,69 +41,146 @@
   <section class="doc-hero">
     <div class="hero-speed" aria-hidden="true"></div>
     <div class="doc-shell">
-      <p class="kicker"><span data-t="zh">上手指南</span><span data-t="en">Getting started</span></p>
-      <h1 class="doc-title"><span data-t="zh">五步走進 MangaFuru</span><span data-t="en">MangaFuru in five steps</span></h1>
+      <p class="kicker"><span data-t="zh">第一次使用</span><span data-t="en">New to MangaFuru</span></p>
+      <h1 class="doc-title"><span data-t="zh">先找到你要讀的內容</span><span data-t="en">First, find what you want to read</span></h1>
       <p class="updated">
-        <span data-t="zh">這份指南只涵蓋 MangaFuru App 自己負責的流程；來源內容、帳號、授權與可用性，由你設定的來源或服務決定。</span>
-        <span data-t="en">This guide covers only what the MangaFuru app itself handles. Source content, accounts, authorization, and availability are determined by the sources or services you configure.</span>
+        <span data-t="zh">MangaFuru 是閱讀器，不是線上漫畫商店。App 不會預先附漫畫，你需要加入自己有權閱讀的內容。</span>
+        <span data-t="en">MangaFuru is a reader, not an online manga store. It comes with no bundled catalog, so you add content you have the right to read.</span>
       </p>
     </div>
   </section>
 
   <main class="doc-shell doc-body">
-    <div class="summary-card" style="margin-top:0;margin-bottom:26px">
-      <p>
-        <span data-t="zh"><strong>最快的兩條上手路徑，都是你已經擁有的內容：</strong>① 匯入本機的 EPUB、PDF、CBZ，原地就能讀；② 連上你自架的 Komga 伺服器，讀你整理好的書庫。想要更多時，再依下面的步驟自行設定其他來源。</span>
-        <span data-t="en"><strong>The two fastest on-ramps are content you already own:</strong> ① import local EPUB, PDF, and CBZ files and read them in place; ② connect to your own self-hosted Komga server and read the library you organized. When you want more, configure other sources yourself using the steps below.</span>
-      </p>
-    </div>
-    <div class="steps">
-      <section class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h3><span data-t="zh">先加入 Repositories</span><span data-t="en">Add a repository first</span></h3>
-          <p><span data-t="zh">MangaFuru 的來源流程從 Repositories 開始。加入 repository 後，App 才能顯示可安裝或可使用的 Sources。</span><span data-t="en">MangaFuru's source flow starts with repositories. Once you add one, the app can show the sources available to install or use.</span></p>
-          <p><span data-t="zh">MangaFuru 不提供官方內容目錄，也不推薦特定第三方來源。請只加入你信任且有權使用的 repository 或本機服務。</span><span data-t="en">MangaFuru ships no official catalog and recommends no particular third-party source. Add only repositories or local services you trust and have the right to use.</span></p>
-        </div>
-      </section>
-
-      <section class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h3><span data-t="zh">安裝或啟用 Sources</span><span data-t="en">Install or enable sources</span></h3>
-          <p><span data-t="zh">Sources 是你用來瀏覽目錄、搜尋、開啟詳情與載入章節的來源入口。若來源需要登入、mirror、token 或驗證，請在 App 內的 Source Settings 依來源要求設定。</span><span data-t="en">Sources are how you browse catalogs, search, open details, and load chapters. If a source needs login, a mirror, a token, or verification, configure it in the in-app Source Settings as that source requires.</span></p>
-        </div>
-      </section>
-
-      <section class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h3><span data-t="zh">瀏覽、加入書庫或稍後閱讀</span><span data-t="en">Browse, then add to library or read-later</span></h3>
-          <p><span data-t="zh">從 Browse 或來源 catalog 開啟作品詳情後，你可以加入書庫或稍後閱讀。書庫適合長期追蹤；稍後閱讀適合先保存但還不想放進正式書庫的作品。</span><span data-t="en">Open a title from Browse or a source catalog, then add it to your library or read-later. The library suits titles you follow long-term; read-later is for things you want to keep without committing to the main library yet.</span></p>
-        </div>
-      </section>
-
-      <section class="step">
-        <div class="step-num">4</div>
-        <div>
-          <h3><span data-t="zh">開始閱讀與續讀</span><span data-t="en">Read and resume</span></h3>
-          <p><span data-t="zh">從作品詳情、書庫、稍後閱讀或閱讀歷史都可以回到閱讀流程。MangaFuru 會保存閱讀進度，讓你下次從合適的位置繼續。</span><span data-t="en">Jump back into reading from a title's detail, your library, read-later, or history. MangaFuru saves your progress so you can pick up from the right place next time.</span></p>
-        </div>
-      </section>
-
-      <section class="step">
-        <div class="step-num">5</div>
-        <div>
-          <h3><span data-t="zh">遇到問題時</span><span data-t="en">When something breaks</span></h3>
-          <p><span data-t="zh">若來源需要驗證、章節空白、圖片載入失敗、進度沒有保存或 App 行為異常，請先記下發生位置、App 版本、iOS 版本、來源 host 與重現步驟，再到 <a href="support.html">回報問題</a> 建立 issue。</span><span data-t="en">If a source needs verification, a chapter comes up blank, images fail to load, progress isn't saved, or the app behaves oddly, note the area, app version, iOS version, source host, and steps to reproduce, then open an issue from <a href="support.html">Report an issue</a>.</span></p>
-        </div>
-      </section>
+    <div class="download-card">
+      <img src="assets/app-icon.png" alt="" width="64" height="64">
+      <div>
+        <h2><span data-t="zh">先安裝 MangaFuru</span><span data-t="en">Install MangaFuru first</span></h2>
+        <p><span data-t="zh">已於 App Store 上架，需要 iOS 18.6 或以上版本。</span><span data-t="en">Available on the App Store. Requires iOS 18.6 or later.</span></p>
+      </div>
+      <a class="btn btn--primary" href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">前往 App Store</span><span data-t="en">Open App Store</span><span aria-hidden="true">↗</span></a>
     </div>
 
-    <div class="doc-note" style="margin-top:30px">
-      <span data-t="zh"><strong>提醒：</strong>請不要在公開回報中貼出密碼、私密 token、完整 cookie、付費內容或他人個資。來源相關欄位只填可公開資訊。</span>
-      <span data-t="en"><strong>Reminder:</strong> never paste passwords, private tokens, full cookies, paid content, or other people's personal data into public reports. For source fields, share public information only.</span>
+    <div class="summary-card beginner-summary" style="margin-top:0;margin-bottom:26px">
+      <p><span data-t="zh"><strong>第一次打開沒有看到任何漫畫，是正常的。</strong>MangaFuru 不會替你下載或推薦內容。最簡單的開始方式，是匯入一個你自己的 EPUB、PDF 或 CBZ；如果你已經在使用 Komga，也可以直接連接。</span><span data-t="en"><strong>It is normal to see no manga the first time you open the app.</strong> MangaFuru does not download or recommend content for you. The easiest start is importing one of your EPUB, PDF, or CBZ files. If you already use Komga, you can connect it directly.</span></p>
     </div>
+
+    <h2><span data-t="zh">你現在手上有什麼？</span><span data-t="en">What do you already have?</span></h2>
+    <div class="guide-grid" aria-label="MangaFuru guides">
+      <a class="guide-card guide-card--recommended" href="#local-files">
+        <span class="guide-tag"><span data-t="zh">建議第一次從這裡開始</span><span data-t="en">Recommended first step</span></span>
+        <strong><span data-t="zh">我有 EPUB、PDF 或 CBZ 檔案</span><span data-t="en">I have EPUB, PDF, or CBZ files</span></strong>
+        <small><span data-t="zh">從 iPhone 的「檔案」選取一本自己的書。</span><span data-t="en">Choose one of your books from Files on your iPhone.</span></small>
+      </a>
+      <a class="guide-card" href="#komga">
+        <span class="guide-tag"><span data-t="zh">我有自己的伺服器</span><span data-t="en">I have my own server</span></span>
+        <strong><span data-t="zh">我已經在使用 Komga</span><span data-t="en">I already use Komga</span></strong>
+        <small><span data-t="zh">Komga 是一套由你自行架設與管理的數位書庫。</span><span data-t="en">Komga is a digital library that you host and manage.</span></small>
+      </a>
+      <a class="guide-card guide-card--advanced" href="repositories.html">
+        <span class="guide-tag"><span data-t="zh">進階功能・可以先跳過</span><span data-t="en">Advanced · safe to skip</span></span>
+        <strong><span data-t="zh">我知道要連哪個其他來源</span><span data-t="en">I know another source to connect</span></strong>
+        <small><span data-t="zh">適合已經熟悉來源設定方式的使用者。</span><span data-t="en">For people who already understand source setup.</span></small>
+      </a>
+    </div>
+
+    <p class="beginner-note"><span data-t="zh">不確定 Komga 或「來源」是什麼？沒關係，先選第一個「自己的檔案」就好。</span><span data-t="en">Not sure what Komga or a “source” is? That is fine — start with the first option, your own files.</span></p>
+
+    <h2 class="guide-secondary-title"><span data-t="zh">開始閱讀後，你可能還會需要</span><span data-t="en">After you start reading</span></h2>
+    <div class="guide-grid guide-grid--secondary" aria-label="More MangaFuru guides">
+      <a class="guide-card" href="#library-reader">
+        <span class="guide-tag"><span data-t="zh">日常閱讀</span><span data-t="en">Daily reading</span></span>
+        <strong><span data-t="zh">書庫、清單與續讀</span><span data-t="en">Library, lists, and resume</span></strong>
+        <small><span data-t="zh">把作品放對位置，隨時接著讀。</span><span data-t="en">Keep titles organized and pick up where you stopped.</span></small>
+      </a>
+      <a class="guide-card" href="#backup">
+        <span class="guide-tag"><span data-t="zh">保護資料</span><span data-t="en">Protect data</span></span>
+        <strong><span data-t="zh">備份與換機</span><span data-t="en">Back up and move devices</span></strong>
+        <small><span data-t="zh">匯出書庫、進度、來源與設定。</span><span data-t="en">Export your library, progress, sources, and settings.</span></small>
+      </a>
+      <a class="guide-card" href="#troubleshooting">
+        <span class="guide-tag"><span data-t="zh">需要協助</span><span data-t="en">Get help</span></span>
+        <strong><span data-t="zh">排錯與回報</span><span data-t="en">Troubleshoot and report</span></strong>
+        <small><span data-t="zh">先分清 App、來源與連線問題。</span><span data-t="en">Separate app, source, and connection problems first.</span></small>
+      </a>
+    </div>
+
+    <section class="guide-section" id="local-files">
+      <h2><span class="n">01</span><span data-t="zh">匯入 EPUB、PDF 或 CBZ</span><span data-t="en">Import EPUB, PDF, or CBZ</span></h2>
+      <p class="route"><span data-t="zh">最簡單的開始方式：先把 MangaFuru 當成自己的檔案閱讀器。</span><span data-t="en">The easiest start: use MangaFuru as a reader for your own files.</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>打開「探索」。</strong>點畫面底部的「探索」，再點右上角＋。你會進入管理內容位置的 Sources 畫面。</span><span data-t="en"><strong>Open Browse.</strong> Tap Browse at the bottom, then tap the top-right +. This opens Sources, where MangaFuru manages content locations.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>開啟「本機來源」。</strong>在「可用」區找到本機來源並點「新增」。可以把它想成專門放你自己檔案的書架。</span><span data-t="en"><strong>Enable Local Source.</strong> Find Local Source under Available and tap Add. Think of it as a shelf for your own files.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>選一本書。</strong>回到探索，打開本機來源，點右上角＋，從「檔案」選取你自己的 EPUB、PDF 或 CBZ。</span><span data-t="en"><strong>Choose a book.</strong> Return to Browse, open Local Source, tap the top-right +, and select your EPUB, PDF, or CBZ from Files.</span></li>
+        <li><span class="n">4</span><span data-t="zh"><strong>開始閱讀或加入書庫。</strong>匯入後先點開作品即可閱讀；如果想長期保留在首頁，再從作品詳情加入書庫。匯入本身不會自動收藏。</span><span data-t="en"><strong>Read it or add it to Library.</strong> Open the imported title to read. If you want it kept on your home screen, add it to Library from the title detail. Importing alone does not auto-save it there.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="komga">
+      <h2><span class="n">02</span><span data-t="zh">連接你自架的 Komga</span><span data-t="en">Connect your self-hosted Komga</span></h2>
+      <p class="route"><span data-t="zh">Komga 是一套由你自行架設的數位書庫；如果你沒有在使用 Komga，可以直接跳過這段。</span><span data-t="en">Komga is a digital library you host yourself. If you do not already use Komga, you can skip this section.</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>前往 Sources。</strong>從底部「探索」點右上角＋，再點工具列上的伺服器新增按鈕。Komga 已內建，不需要另外安裝。</span><span data-t="en"><strong>Go to Sources.</strong> From Browse, tap the top-right +, then tap the add-server button in the toolbar. Komga is built in, so there is nothing else to install.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>填入連線資料。</strong>輸入顯示名稱、伺服器位址，以及伺服器需要的帳號與密碼；需要額外欄位時展開進階設定。</span><span data-t="en"><strong>Enter connection details.</strong> Add a display name, server address, and any username and password your server requires; open Advanced for additional fields.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>點「連接」。</strong>驗證成功後，伺服器會成為一個獨立來源；回到探索即可打開書庫。MangaFuru 最多可保留三個 Komga 連線。</span><span data-t="en"><strong>Tap Connect.</strong> After validation, the server appears as its own source; return to Browse to open the library. MangaFuru supports up to three Komga connections.</span></li>
+      </ol>
+      <div class="doc-note"><span data-t="zh">MangaFuru 只是讀取端。伺服器可用性、帳號、TLS 與內容都由你自己的 Komga 環境負責。</span><span data-t="en">MangaFuru is only the reader. Server availability, accounts, TLS, and content remain the responsibility of your own Komga environment.</span></div>
+    </section>
+
+    <section class="guide-section" id="external-sources">
+      <h2><span class="n">03</span><span data-t="zh">進階：連接其他來源</span><span data-t="en">Advanced: connect another source</span></h2>
+      <p class="route"><span data-t="zh">第一次使用可以先跳過。只有你已經知道要使用哪個外部來源時，才需要這段。</span><span data-t="en">New users can skip this. You need it only when you already know which external source you want to use.</span></p>
+      <div class="term-box">
+        <p><span data-t="zh"><strong>內容來源（Source）</strong>是 MangaFuru 讀取內容的連接方式，例如本機檔案、你的 Komga，或你自行選擇的其他服務。</span><span data-t="en"><strong>A content source</strong> is a connection MangaFuru reads from, such as local files, your Komga, or another service you choose.</span></p>
+        <p><span data-t="zh"><strong>Repository</strong>只是一份「有哪些外部來源可以安裝」的清單，本身不是漫畫內容。讀本機檔案或 Komga 時完全不需要它。</span><span data-t="en"><strong>A repository</strong> is only a list of external source connectors available to install; it is not manga content. Local files and Komga do not need one.</span></p>
+      </div>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>準備 Repository 網址。</strong>MangaFuru 不提供、不推薦來源清單；請只使用你信任、且有權存取的 Repository。</span><span data-t="en"><strong>Prepare a repository URL.</strong> MangaFuru does not provide or recommend source lists. Use only a repository you trust and have the right to access.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>新增 Repository。</strong>從 Sources 頁底部進入新增流程，閱讀並同意外部來源提醒，再填入名稱與網址。</span><span data-t="en"><strong>Add the repository.</strong> Start the add flow from the bottom of Sources, review and accept the external-source notice, then enter its name and URL.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>安裝來源。</strong>開啟剛加入的 Repository，在可用來源旁點「新增」；完成後回到探索開啟來源。</span><span data-t="en"><strong>Install a source.</strong> Open the repository you just added and tap Add beside an available source, then return to Browse to open it.</span></li>
+        <li><span class="n">4</span><span data-t="zh"><strong>完成來源專屬設定。</strong>登入、mirror、token 或網站驗證若有需要，都從該來源的設定頁依服務要求處理。</span><span data-t="en"><strong>Finish source-specific setup.</strong> If login, a mirror, token, or website verification is required, handle it from that source's settings as the service requires.</span></li>
+      </ol>
+      <div class="guide-grid guide-grid--followup" aria-label="Advanced source guides">
+        <a class="guide-card" href="repositories.html">
+          <span class="guide-tag"><span data-t="zh">完整使用說明</span><span data-t="en">Complete user guide</span></span>
+          <strong><span data-t="zh">Repository 與外部來源</span><span data-t="en">Repositories and external sources</span></strong>
+          <small><span data-t="zh">了解網址格式、加入、安裝、更新與移除。</span><span data-t="en">Learn URL formats, adding, installing, updating, and removing.</span></small>
+        </a>
+        <a class="guide-card guide-card--advanced" href="source-development.html">
+          <span class="guide-tag"><span data-t="zh">開發者指南</span><span data-t="en">Developer guide</span></span>
+          <strong><span data-t="zh">開發與發布自己的來源</span><span data-t="en">Develop and publish your own source</span></strong>
+          <small><span data-t="zh">了解來源套件、APK 與 Repository 的發布關係。</span><span data-t="en">Understand source packages, APKs, and repository delivery.</span></small>
+        </a>
+      </div>
+    </section>
+
+    <section class="guide-section" id="library-reader">
+      <h2><span class="n">04</span><span data-t="zh">整理書庫並接著讀</span><span data-t="en">Organize your library and resume</span></h2>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>從作品詳情做選擇。</strong>長期追蹤的作品加入書庫；還沒決定的內容可以先放到稍後閱讀。</span><span data-t="en"><strong>Choose from the title detail.</strong> Add long-term reads to Library, or save undecided titles to Read Later.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>選擇閱讀方式。</strong>閱讀器支援直向 webtoon、分頁與由右至左模式；依內容調整即可。</span><span data-t="en"><strong>Choose a reading mode.</strong> The reader supports vertical webtoon, paged, and right-to-left modes. Pick what fits the content.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>從任何入口續讀。</strong>書庫、稍後閱讀與閱讀歷史都會接回作品；進度會保存在裝置上，讓你從上次位置繼續。</span><span data-t="en"><strong>Resume from any entry point.</strong> Library, Read Later, and History all lead back to the title; progress is stored on your device so you can continue where you stopped.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="backup">
+      <h2><span class="n">05</span><span data-t="zh">備份與換機前準備</span><span data-t="en">Back up before moving devices</span></h2>
+      <p class="route"><span data-t="zh">設定 → 備份與同步</span><span data-t="en">Settings → Backup &amp; Sync</span></p>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>選擇備份項目。</strong>依需要包含書庫、閱讀進度、來源與設定。</span><span data-t="en"><strong>Choose backup categories.</strong> Include your library, reading progress, sources, and settings as needed.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>匯出並妥善保存。</strong>使用「立即備份」建立檔案，存到你控制的位置。備份不包含已下載的漫畫圖片。</span><span data-t="en"><strong>Export and store it safely.</strong> Use Back Up Now to create a file and save it somewhere you control. Downloaded manga images are not included.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>在新裝置還原。</strong>安裝 MangaFuru 後回到同一頁選擇還原；完成後再重新下載離線內容。</span><span data-t="en"><strong>Restore on the new device.</strong> Install MangaFuru, return to the same page, and choose Restore; download offline content again afterward.</span></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" id="troubleshooting">
+      <h2><span class="n">06</span><span data-t="zh">排錯與回報問題</span><span data-t="en">Troubleshoot and report an issue</span></h2>
+      <ol class="guide-steps">
+        <li><span class="n">1</span><span data-t="zh"><strong>先直接開啟失敗內容。</strong>若章節無法線上閱讀，下載通常也不會成功；先確認來源或伺服器目前可連線。</span><span data-t="en"><strong>Open the failing content directly first.</strong> If a chapter cannot be read online, its download usually cannot succeed either. Confirm the source or server is reachable.</span></li>
+        <li><span class="n">2</span><span data-t="zh"><strong>確認需要的設定。</strong>檢查登入、來源設定、網站驗證、伺服器位址與網路權限。</span><span data-t="en"><strong>Check required setup.</strong> Review login, source settings, website verification, server address, and network permissions.</span></li>
+        <li><span class="n">3</span><span data-t="zh"><strong>提供可重現資訊。</strong>仍有問題時，記下發生位置、App 與 iOS 版本、裝置、來源 host、步驟、預期與實際結果，再到<a href="support.html">回報問題</a>。</span><span data-t="en"><strong>Provide reproducible details.</strong> If it still fails, note the area, app and iOS versions, device, source host, steps, expected result, and actual result, then <a href="support.html">report the issue</a>.</span></li>
+      </ol>
+      <div class="doc-note"><span data-t="zh"><strong>不要公開敏感資料：</strong>密碼、私密 token、完整 cookie、付費內容與他人個資都不應貼進 issue。</span><span data-t="en"><strong>Keep sensitive data private:</strong> never paste passwords, private tokens, full cookies, paid content, or other people's personal data into an issue.</span></div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -109,6 +188,7 @@
       <div class="footer-bottom" style="border-top:0">
         <span>© 2026 MangaFuru Team</span>
         <span>
+          <a href="https://apps.apple.com/us/app/mangafuru/id6786539287" rel="noopener"><span data-t="zh">App Store 下載</span><span data-t="en">Download</span></a> ·
           <a href="faq.html">FAQ</a> ·
           <a href="support.html"><span data-t="zh">回報問題</span><span data-t="en">Report</span></a> ·
           <a href="privacy.html"><span data-t="zh">隱私</span><span data-t="en">Privacy</span></a> ·
